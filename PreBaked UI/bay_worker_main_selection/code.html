@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Locomotion AI - Technician Dashboard</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0a66c2",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex flex-col min-h-screen">
+<header class="flex items-center justify-between px-6 py-4 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-background-dark shadow-sm">
+<div class="flex items-center gap-3">
+<div class="bg-primary text-white p-2 rounded-lg">
+<span class="material-symbols-outlined text-2xl">
+                        directions_car
+                    </span>
+</div>
+<h1 class="text-xl font-bold text-gray-900 dark:text-white">Locomotion AI</h1>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Dashboard</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Workflows</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Inventory</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Reporting</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="relative text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
+<span class="material-symbols-outlined">
+                        notifications
+                    </span>
+<span class="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-xs text-white">3</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA3wajLm9Cr17fcEP1sLHnsc5trHbwxs6cdbNSSBwn9xEW_kqHZa4UzDGc_YRUgc7rtCl7VqyZt0_tN6-_u6zsHl60F0_am3q2nCKTCYlgwx4y4fxFKKwZDuXsZwsAuSHBu9upF-dm7Cpdnb5B-5bw25gLN7yrMyRSgIu4C4Lg7o3abeRUujofP0oAzv7WO5dcfyxOohIuyONxJZhYF67DhPY7eQkQBVBRVRViI447NRic9L5Az4ZIkGdXgvupKEuWU4s9lSxueZ3w');"></div>
+</div>
+</header>
+<main class="flex-1 container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="max-w-4xl mx-auto">
+<div class="mb-8">
+<h2 class="text-3xl font-bold text-gray-900 dark:text-white">Technician Dashboard</h2>
+<p class="mt-2 text-gray-600 dark:text-gray-400">Welcome back, Alex! Ready to get started?</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<a class="group block rounded-xl bg-white dark:bg-gray-800/50 p-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-primary/50 dark:hover:border-primary/50" href="#">
+<div class="flex items-center gap-5">
+<div class="flex-shrink-0 bg-primary/10 dark:bg-primary/20 p-4 rounded-lg">
+<span class="material-symbols-outlined text-3xl text-primary">
+                                    build
+                                </span>
+</div>
+<div>
+<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Technician Interface</h3>
+<p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Access your assigned repair tasks and manage workflow.</p>
+</div>
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-500 ml-auto group-hover:text-primary transition-colors">
+                                arrow_forward
+                            </span>
+</div>
+</a>
+<a class="group block rounded-xl bg-white dark:bg-gray-800/50 p-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-primary/50 dark:hover:border-primary/50" href="#">
+<div class="flex items-center gap-5">
+<div class="flex-shrink-0 bg-primary/10 dark:bg-primary/20 p-4 rounded-lg">
+<span class="material-symbols-outlined text-3xl text-primary">
+                                    time_to_leave
+                                </span>
+</div>
+<div>
+<h3 class="text-lg font-semibold text-gray-900 dark:text-white">QC &amp; Road Test</h3>
+<p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Perform quality checks and road tests on completed repairs.</p>
+</div>
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-500 ml-auto group-hover:text-primary transition-colors">
+                                arrow_forward
+                            </span>
+</div>
+</a>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

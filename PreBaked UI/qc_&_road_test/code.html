@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Locomotion AI - QC Checklist</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0a66c2",
+            "background-light": "#f5f7f8",
+            "background-dark": "#101922",
+            "foreground-light": "#111827",
+            "foreground-dark": "#f9fafb",
+            "card-light": "#ffffff",
+            "card-dark": "#1f2937",
+            "border-light": "#e5e7eb",
+            "border-dark": "#374151",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "0.75rem",
+            "xl": "1rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+  </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 z-10 bg-card-light/80 dark:bg-card-dark/80 backdrop-blur-sm border-b border-border-light dark:border-border-dark">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-3xl">directions_car</span>
+<span class="text-xl font-bold">Locomotion AI</span>
+</div>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Dashboard</a>
+<a class="text-sm font-medium text-primary" href="#">Workflows</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Inventory</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Reporting</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAJMlWbxkX3WEu1tojwfH5hTAW4oKfeUwNCxY-_MtOi-h4VWuxiHm0S6q2c_oL2OVuZc4d084foLVNZdgDEGu0O9OUN9ZmCQ8KcJ4ZVJscDt4ym_ybOKuheAzpGis_aGcOqLrhNryA_hzN6vcPVuYR__Xz8KRg6xulBRnq2b0-mx6sdmh2CtguAtGpMbTPKfAyIh8AIvbdMKb9ucXVM-KR-rN6SZYz8leHmo3QnJARcF17AhkHCoVJZ79WuJOG_pAtO3-6l1ytJbh8");'></div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+<div class="max-w-3xl mx-auto">
+<div class="mb-8">
+<h1 class="text-3xl md:text-4xl font-bold tracking-tight text-foreground-light dark:text-foreground-dark">Quality Control &amp; Road Test</h1>
+<p class="mt-2 text-lg text-foreground-light/70 dark:text-foreground-dark/70">Vehicle: 2023 Ford F-150 - RO #12345</p>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-lg shadow-sm border border-border-light dark:border-border-dark">
+<div class="p-6 border-b border-border-light dark:border-border-dark">
+<h2 class="text-xl font-semibold leading-tight">QC Checklist</h2>
+</div>
+<div class="divide-y divide-border-light dark:divide-border-dark">
+<label class="flex items-center gap-4 p-6 cursor-pointer hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors">
+<input class="h-5 w-5 rounded border-2 border-border-light dark:border-border-dark bg-transparent text-primary focus:ring-primary focus:ring-offset-background-light dark:focus:ring-offset-background-dark" type="checkbox"/>
+<span class="flex-1 text-base">Torque Spec Verification</span>
+<span class="material-symbols-outlined text-foreground-light/50 dark:text-foreground-dark/50">info</span>
+</label>
+<label class="flex items-center gap-4 p-6 cursor-pointer hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors">
+<input checked="" class="h-5 w-5 rounded border-2 border-border-light dark:border-border-dark bg-transparent text-primary focus:ring-primary focus:ring-offset-background-light dark:focus:ring-offset-background-dark" type="checkbox"/>
+<span class="flex-1 text-base">Fluid Temperature Checks</span>
+<span class="material-symbols-outlined text-foreground-light/50 dark:text-foreground-dark/50">info</span>
+</label>
+<label class="flex items-center gap-4 p-6 cursor-pointer hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors">
+<input class="h-5 w-5 rounded border-2 border-border-light dark:border-border-dark bg-transparent text-primary focus:ring-primary focus:ring-offset-background-light dark:focus:ring-offset-background-dark" type="checkbox"/>
+<span class="flex-1 text-base">Leak Inspection</span>
+<span class="material-symbols-outlined text-foreground-light/50 dark:text-foreground-dark/50">info</span>
+</label>
+<label class="flex items-center gap-4 p-6 cursor-pointer hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors">
+<input class="h-5 w-5 rounded border-2 border-border-light dark:border-border-dark bg-transparent text-primary focus:ring-primary focus:ring-offset-background-light dark:focus:ring-offset-background-dark" type="checkbox"/>
+<span class="flex-1 text-base">Road Test (Shift Map)</span>
+<span class="material-symbols-outlined text-foreground-light/50 dark:text-foreground-dark/50">info</span>
+</label>
+<label class="flex items-center gap-4 p-6 cursor-pointer hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors">
+<input checked="" class="h-5 w-5 rounded border-2 border-border-light dark:border-border-dark bg-transparent text-primary focus:ring-primary focus:ring-offset-background-light dark:focus:ring-offset-background-dark" type="checkbox"/>
+<span class="flex-1 text-base">Scan Tool for DTCs</span>
+<span class="material-symbols-outlined text-foreground-light/50 dark:text-foreground-dark/50">info</span>
+</label>
+<label class="flex items-center gap-4 p-6 cursor-pointer hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors">
+<input class="h-5 w-5 rounded border-2 border-border-light dark:border-border-dark bg-transparent text-primary focus:ring-primary focus:ring-offset-background-light dark:focus:ring-offset-background-dark" type="checkbox"/>
+<span class="flex-1 text-base">Photo Set Completion</span>
+<span class="material-symbols-outlined text-foreground-light/50 dark:text-foreground-dark/50">info</span>
+</label>
+</div>
+<div class="p-6 flex justify-end items-center gap-4">
+<button class="px-4 py-2 text-sm font-semibold rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors">
+              Save Progress
+            </button>
+<button class="px-6 py-2 text-sm font-semibold bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-base">check_circle</span>
+<span>Complete QC</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

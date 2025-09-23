@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Locomotion AI - Quote Comparison</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter:wght@400;500;600;700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0a66c2",
+              "background-light": "#f5f7f8",
+              "background-dark": "#101922",
+              "content-light": "#ffffff",
+              "content-dark": "#182431",
+              "subtle-light": "#eef2f5",
+              "subtle-dark": "#202d3a",
+              "text-primary-light": "#0f172a",
+              "text-primary-dark": "#f1f5f9",
+              "text-secondary-light": "#64748b",
+              "text-secondary-dark": "#94a3b8",
+              "border-light": "#e2e8f0",
+              "border-dark": "#334155",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+            },
+            borderRadius: { DEFAULT: "0.5rem", lg: "0.75rem", xl: "1rem", full: "9999px" },
+          },
+        },
+      };
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-primary-light dark:text-text-primary-dark">
+<div class="flex h-screen w-full">
+<aside class="w-80 flex-shrink-0 border-r border-border-light dark:border-border-dark bg-content-light dark:bg-content-dark flex flex-col">
+<div class="p-4 border-b border-border-light dark:border-border-dark">
+<h1 class="text-2xl font-bold text-primary">Locomotion AI</h1>
+</div>
+<div class="p-4">
+<div class="relative">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+<svg class="text-text-secondary-light dark:text-text-secondary-dark" fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+</svg>
+</div>
+<input class="w-full rounded-lg border-border-light dark:border-border-dark bg-subtle-light dark:bg-subtle-dark py-2 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary" placeholder="Search" type="text"/>
+</div>
+</div>
+<div class="px-4 pb-4">
+<h2 class="text-lg font-semibold mb-2">Work Orders</h2>
+<nav class="flex flex-col space-y-1">
+<a class="flex justify-between items-center px-3 py-2 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary font-semibold" href="#">
+<div class="flex flex-col">
+<span class="text-sm">WO-1001</span>
+<span class="text-xs text-text-secondary-light dark:text-text-secondary-dark">Toyota Camry</span>
+</div>
+<span class="text-sm">$1,200</span>
+</a>
+<a class="flex justify-between items-center px-3 py-2 rounded-lg hover:bg-subtle-light dark:hover:bg-subtle-dark" href="#">
+<div class="flex flex-col">
+<span class="text-sm">WO-1002</span>
+<span class="text-xs text-text-secondary-light dark:text-text-secondary-dark">Honda Civic</span>
+</div>
+<span class="text-sm">$850</span>
+</a>
+<a class="flex justify-between items-center px-3 py-2 rounded-lg hover:bg-subtle-light dark:hover:bg-subtle-dark" href="#">
+<div class="flex flex-col">
+<span class="text-sm">WO-1003</span>
+<span class="text-xs text-text-secondary-light dark:text-text-secondary-dark">Ford F-150</span>
+</div>
+<span class="text-sm">$1,500</span>
+</a>
+<a class="flex justify-between items-center px-3 py-2 rounded-lg hover:bg-subtle-light dark:hover:bg-subtle-dark" href="#">
+<div class="flex flex-col">
+<span class="text-sm">WO-1004</span>
+<span class="text-xs text-text-secondary-light dark:text-text-secondary-dark">Chevrolet Silverado</span>
+</div>
+<span class="text-sm">$1,100</span>
+</a>
+<a class="flex justify-between items-center px-3 py-2 rounded-lg hover:bg-subtle-light dark:hover:bg-subtle-dark" href="#">
+<div class="flex flex-col">
+<span class="text-sm">WO-1005</span>
+<span class="text-xs text-text-secondary-light dark:text-text-secondary-dark">Nissan Altima</span>
+</div>
+<span class="text-sm">$950</span>
+</a>
+<a class="flex justify-between items-center px-3 py-2 rounded-lg hover:bg-subtle-light dark:hover:bg-subtle-dark" href="#">
+<div class="flex flex-col">
+<span class="text-sm">WO-1006</span>
+<span class="text-xs text-text-secondary-light dark:text-text-secondary-dark">Jeep Wrangler</span>
+</div>
+<span class="text-sm">$1,300</span>
+</a>
+</nav>
+</div>
+</aside>
+<main class="flex-1 overflow-y-auto">
+<div class="p-8">
+<header class="mb-8">
+<h1 class="text-3xl font-bold">Quote Comparison</h1>
+<p class="text-text-secondary-light dark:text-text-secondary-dark mt-1">Work Order: WO-1001 - Toyota Camry</p>
+</header>
+<div class="space-y-6">
+<section>
+<h2 class="text-xl font-bold mb-4">Part: Brake Pads</h2>
+<div class="rounded-lg border border-border-light dark:border-border-dark bg-content-light dark:bg-content-dark overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-sm text-left">
+<thead class="bg-subtle-light dark:bg-subtle-dark text-xs uppercase text-text-secondary-light dark:text-text-secondary-dark">
+<tr>
+<th class="px-6 py-3 font-medium" scope="col">Vendor</th>
+<th class="px-6 py-3 font-medium" scope="col">Price</th>
+<th class="px-6 py-3 font-medium" scope="col">ETA</th>
+<th class="px-6 py-3 font-medium" scope="col">Warranty</th>
+<th class="px-6 py-3 font-medium" scope="col">Brand</th>
+<th class="px-6 py-3 font-medium text-right" scope="col">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-border-light dark:border-border-dark">
+<td class="px-6 py-4 font-medium whitespace-nowrap">Auto Parts Inc.</td>
+<td class="px-6 py-4">$50</td>
+<td class="px-6 py-4">2 days</td>
+<td class="px-6 py-4">1 year</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary dark:bg-primary/20">Premium</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="font-semibold text-primary hover:underline">Attach Quote</button>
+</td>
+</tr>
+<tr class="border-b border-border-light dark:border-border-dark bg-subtle-light dark:bg-subtle-dark">
+<td class="px-6 py-4 font-medium whitespace-nowrap">Global Auto Supply</td>
+<td class="px-6 py-4">$45</td>
+<td class="px-6 py-4">3 days</td>
+<td class="px-6 py-4">6 months</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary dark:bg-primary/20">Standard</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="font-semibold text-primary hover:underline">Attach Quote</button>
+</td>
+</tr>
+<tr class="border-b border-border-light dark:border-border-dark">
+<td class="px-6 py-4 font-medium whitespace-nowrap">Discount Auto Parts</td>
+<td class="px-6 py-4">$40</td>
+<td class="px-6 py-4">1 day</td>
+<td class="px-6 py-4">3 months</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary dark:bg-primary/20">Economy</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="font-semibold text-primary hover:underline">Attach Quote</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<div class="flex justify-end gap-4 mt-8">
+<button class="px-6 py-2 rounded-lg border border-border-light dark:border-border-dark text-text-primary-light dark:text-text-primary-dark font-semibold hover:bg-subtle-light dark:hover:bg-subtle-dark">
+                  Cancel
+                </button>
+<button class="px-6 py-2 rounded-lg bg-primary text-white font-semibold hover:opacity-90">
+                  Create Purchase Order
+                </button>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>
