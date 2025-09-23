@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locomotion AI - Pre-Baked UI Designs</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0a66c2",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+    <div class="min-h-screen">
+        <header class="bg-white dark:bg-background-dark shadow-sm border-b border-gray-200 dark:border-gray-700">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+                <div class="flex items-center gap-3">
+                    <div class="bg-primary text-white p-3 rounded-lg">
+                        <span class="material-symbols-outlined text-3xl">directions_car</span>
+                    </div>
+                    <div>
+                        <h1 class="text-3xl font-bold text-gray-900 dark:text-white">Locomotion AI</h1>
+                        <p class="text-gray-600 dark:text-gray-400">Pre-Baked UI Design Gallery</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Available UI Designs</h2>
+                <p class="text-gray-600 dark:text-gray-400">Click on any design to view the full interface</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Bay Worker Main Selection -->
+                <a href="bay_worker_main_selection/code.html" class="group block rounded-xl bg-white dark:bg-gray-800/50 p-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-primary/50">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-lg">
+                            <span class="material-symbols-outlined text-2xl text-primary">build</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Bay Worker Main Selection</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Technician dashboard interface</p>
+                        </div>
+                    </div>
+                    <img src="bay_worker_main_selection/screen.png" alt="Bay Worker Main Selection" class="w-full h-32 object-cover rounded-lg border border-gray-200 dark:border-gray-700">
+                </a>
+
+                <!-- Inventory Management -->
+                <a href="inventory_management/code.html" class="group block rounded-xl bg-white dark:bg-gray-800/50 p-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-primary/50">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-lg">
+                            <span class="material-symbols-outlined text-2xl text-primary">inventory_2</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Inventory Management</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Parts and inventory tracking</p>
+                        </div>
+                    </div>
+                    <img src="inventory_management/screen.png" alt="Inventory Management" class="w-full h-32 object-cover rounded-lg border border-gray-200 dark:border-gray-700">
+                </a>
+
+                <!-- Lifts Management -->
+                <a href="lifts_management/code.html" class="group block rounded-xl bg-white dark:bg-gray-800/50 p-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-primary/50">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-lg">
+                            <span class="material-symbols-outlined text-2xl text-primary">elevator</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Lifts Management</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Bay lift scheduling and status</p>
+                        </div>
+                    </div>
+                    <img src="lifts_management/screen.png" alt="Lifts Management" class="w-full h-32 object-cover rounded-lg border border-gray-200 dark:border-gray-700">
+                </a>
+
+                <!-- Manager Main Selection -->
+                <a href="manager_main_selection/code.html" class="group block rounded-xl bg-white dark:bg-gray-800/50 p-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-primary/50">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-lg">
+                            <span class="material-symbols-outlined text-2xl text-primary">manage_accounts</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Manager Main Selection</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Manager dashboard and controls</p>
+                        </div>
+                    </div>
+                    <img src="manager_main_selection/screen.png" alt="Manager Main Selection" class="w-full h-32 object-cover rounded-lg border border-gray-200 dark:border-gray-700">
+                </a>
+
+                <!-- Operations Dashboard -->
+                <a href="operations_dashboard/code.html" class="group block rounded-xl bg-white dark:bg-gray-800/50 p-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-primary/50">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-lg">
+                            <span class="material-symbols-outlined text-2xl text-primary">dashboard</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Operations Dashboard</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Live operations monitoring</p>
+                        </div>
+                    </div>
+                    <img src="operations_dashboard/screen.png" alt="Operations Dashboard" class="w-full h-32 object-cover rounded-lg border border-gray-200 dark:border-gray-700">
+                </a>
+
+                <!-- Owner Dashboard -->
+                <a href="owner_dashboard/code.html" class="group block rounded-xl bg-white dark:bg-gray-800/50 p-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-primary/50">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-lg">
+                            <span class="material-symbols-outlined text-2xl text-primary">business</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Owner Dashboard</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Business owner overview</p>
+                        </div>
+                    </div>
+                    <img src="owner_dashboard/screen.png" alt="Owner Dashboard" class="w-full h-32 object-cover rounded-lg border border-gray-200 dark:border-gray-700">
+                </a>
+
+                <!-- Owner Main Selection -->
+                <a href="owner_main_selection/code.html" class="group block rounded-xl bg-white dark:bg-gray-800/50 p-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-primary/50">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-lg">
+                            <span class="material-symbols-outlined text-2xl text-primary">account_circle</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Owner Main Selection</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Owner navigation hub</p>
+                        </div>
+                    </div>
+                    <img src="owner_main_selection/screen.png" alt="Owner Main Selection" class="w-full h-32 object-cover rounded-lg border border-gray-200 dark:border-gray-700">
+                </a>
+
+                <!-- QC & Road Test -->
+                <a href="qc_&_road_test/code.html" class="group block rounded-xl bg-white dark:bg-gray-800/50 p-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-primary/50">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-lg">
+                            <span class="material-symbols-outlined text-2xl text-primary">time_to_leave</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">QC & Road Test</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Quality control checklist</p>
+                        </div>
+                    </div>
+                    <img src="qc_&_road_test/screen.png" alt="QC & Road Test" class="w-full h-32 object-cover rounded-lg border border-gray-200 dark:border-gray-700">
+                </a>
+
+                <!-- Quotes & POS -->
+                <a href="quotes_&_pos/code.html" class="group block rounded-xl bg-white dark:bg-gray-800/50 p-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-primary/50">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-lg">
+                            <span class="material-symbols-outlined text-2xl text-primary">receipt_long</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Quotes & POS</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Quote comparison and orders</p>
+                        </div>
+                    </div>
+                    <img src="quotes_&_pos/screen.png" alt="Quotes & POS" class="w-full h-32 object-cover rounded-lg border border-gray-200 dark:border-gray-700">
+                </a>
+
+                <!-- Reports Overview -->
+                <a href="reports_overview/code.html" class="group block rounded-xl bg-white dark:bg-gray-800/50 p-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-primary/50">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-lg">
+                            <span class="material-symbols-outlined text-2xl text-primary">analytics</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Reports Overview</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Business analytics and reports</p>
+                        </div>
+                    </div>
+                    <img src="reports_overview/screen.png" alt="Reports Overview" class="w-full h-32 object-cover rounded-lg border border-gray-200 dark:border-gray-700">
+                </a>
+
+                <!-- Technician Interface -->
+                <a href="technician_interface/code.html" class="group block rounded-xl bg-white dark:bg-gray-800/50 p-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-primary/50">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-lg">
+                            <span class="material-symbols-outlined text-2xl text-primary">engineering</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Technician Interface</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Work order management</p>
+                        </div>
+                    </div>
+                    <img src="technician_interface/screen.png" alt="Technician Interface" class="w-full h-32 object-cover rounded-lg border border-gray-200 dark:border-gray-700">
+                </a>
+
+                <!-- Warranty Management -->
+                <a href="warranty_management/code.html" class="group block rounded-xl bg-white dark:bg-gray-800/50 p-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-primary/50">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-lg">
+                            <span class="material-symbols-outlined text-2xl text-primary">verified</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Warranty Management</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Warranty tracking system</p>
+                        </div>
+                    </div>
+                    <img src="warranty_management/screen.png" alt="Warranty Management" class="w-full h-32 object-cover rounded-lg border border-gray-200 dark:border-gray-700">
+                </a>
+            </div>
+
+            <div class="mt-12 text-center">
+                <div class="bg-white dark:bg-gray-800/50 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Dark Mode Toggle</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">Click the button below to toggle between light and dark themes</p>
+                    <button onclick="toggleDarkMode()" class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg transition-colors">
+                        Toggle Dark Mode
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('darkMode', document.documentElement.classList.contains('dark'));
+        }
+
+        // Load saved theme preference
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+</body>
+</html>
