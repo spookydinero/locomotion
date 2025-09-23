@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { createClient } from '@/lib/supabase'
 import LoginForm from '@/components/LoginForm'
-import Dashboard from '@/components/Dashboard'
+import ManagerDashboard from '@/components/ManagerDashboard'
 import type { User } from '@supabase/supabase-js'
 
 export default function Home() {
@@ -38,5 +38,5 @@ export default function Home() {
     )
   }
 
-  return user ? <Dashboard /> : <LoginForm />
+  return user ? <ManagerDashboard /> : <LoginForm />
 }
