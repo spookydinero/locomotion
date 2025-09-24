@@ -24,11 +24,11 @@ export default function ManagerDashboard() {
               <h1 className="text-xl font-bold text-gray-900 dark:text-white">Locomotion AI</h1>
             </div>
             <nav className="hidden md:flex items-center space-x-8">
-              <a className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Dashboard</a>
-              <a className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Lifts</a>
-              <a className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Quotes & POs</a>
-              <a className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Inventory</a>
-              <a className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Warranty</a>
+              <a className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="/operations-dashboard">Dashboard</a>
+              <a className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="/lifts-management">Lifts</a>
+              <a className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="/quotes-pos">Quotes & POs</a>
+              <a className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="/inventory-management">Inventory</a>
+              <a className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="/warranty-management">Warranty</a>
             </nav>
             <div className="flex items-center gap-4">
               <button className="relative rounded-full p-2 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark focus:ring-primary">
@@ -51,7 +51,7 @@ export default function ManagerDashboard() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8">Welcome, Alex</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              <a className="group block rounded-lg p-6 bg-white dark:bg-background-dark/50 border border-gray-200 dark:border-gray-800 hover:shadow-lg hover:border-primary dark:hover:border-primary transition-all duration-300" href="#">
+              <a className="group block rounded-lg p-6 bg-white dark:bg-background-dark/50 border border-gray-200 dark:border-gray-800 hover:shadow-lg hover:border-primary dark:hover:border-primary transition-all duration-300" href="/operations-dashboard">
                 <div className="flex items-center gap-4">
                   <div className="p-3 rounded-lg bg-primary/10 text-primary">
                     <span className="material-symbols-outlined">dashboard</span>
@@ -59,7 +59,7 @@ export default function ManagerDashboard() {
                   <h3 className="text-base font-bold text-gray-800 dark:text-gray-200">Operations Dashboard</h3>
                 </div>
               </a>
-              <a className="group block rounded-lg p-6 bg-white dark:bg-background-dark/50 border border-gray-200 dark:border-gray-800 hover:shadow-lg hover:border-primary dark:hover:border-primary transition-all duration-300" href="#">
+              <a className="group block rounded-lg p-6 bg-white dark:bg-background-dark/50 border border-gray-200 dark:border-gray-800 hover:shadow-lg hover:border-primary dark:hover:border-primary transition-all duration-300" href="/lifts-management">
                 <div className="flex items-center gap-4">
                   <div className="p-3 rounded-lg bg-primary/10 text-primary">
                     <span className="material-symbols-outlined">garage</span>
@@ -67,7 +67,7 @@ export default function ManagerDashboard() {
                   <h3 className="text-base font-bold text-gray-800 dark:text-gray-200">Lifts Management</h3>
                 </div>
               </a>
-              <a className="group block rounded-lg p-6 bg-white dark:bg-background-dark/50 border border-gray-200 dark:border-gray-800 hover:shadow-lg hover:border-primary dark:hover:border-primary transition-all duration-300" href="#">
+              <a className="group block rounded-lg p-6 bg-white dark:bg-background-dark/50 border border-gray-200 dark:border-gray-800 hover:shadow-lg hover:border-primary dark:hover:border-primary transition-all duration-300" href="/quotes-pos">
                 <div className="flex items-center gap-4">
                   <div className="p-3 rounded-lg bg-primary/10 text-primary">
                     <span className="material-symbols-outlined">request_quote</span>
@@ -75,7 +75,7 @@ export default function ManagerDashboard() {
                   <h3 className="text-base font-bold text-gray-800 dark:text-gray-200">Quotes & POs</h3>
                 </div>
               </a>
-              <a className="group block rounded-lg p-6 bg-white dark:bg-background-dark/50 border border-gray-200 dark:border-gray-800 hover:shadow-lg hover:border-primary dark:hover:border-primary transition-all duration-300" href="#">
+              <a className="group block rounded-lg p-6 bg-white dark:bg-background-dark/50 border border-gray-200 dark:border-gray-800 hover:shadow-lg hover:border-primary dark:hover:border-primary transition-all duration-300" href="/inventory-management">
                 <div className="flex items-center gap-4">
                   <div className="p-3 rounded-lg bg-primary/10 text-primary">
                     <span className="material-symbols-outlined">inventory_2</span>
@@ -83,7 +83,7 @@ export default function ManagerDashboard() {
                   <h3 className="text-base font-bold text-gray-800 dark:text-gray-200">Inventory Management</h3>
                 </div>
               </a>
-              <a className="group block rounded-lg p-6 bg-white dark:bg-background-dark/50 border border-gray-200 dark:border-gray-800 hover:shadow-lg hover:border-primary dark:hover:border-primary transition-all duration-300" href="#">
+              <a className="group block rounded-lg p-6 bg-white dark:bg-background-dark/50 border border-gray-200 dark:border-gray-800 hover:shadow-lg hover:border-primary dark:hover:border-primary transition-all duration-300" href="/warranty-management">
                 <div className="flex items-center gap-4">
                   <div className="p-3 rounded-lg bg-primary/10 text-primary">
                     <span className="material-symbols-outlined">verified_user</span>
