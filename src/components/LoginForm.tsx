@@ -28,7 +28,7 @@ export default function LoginForm() {
         window.location.reload()
       }
     } catch (err) {
-      setError('An unexpected error occurred')
+      setError(err instanceof Error ? err.message : 'An unexpected error occurred')
     } finally {
       setLoading(false)
     }

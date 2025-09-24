@@ -35,7 +35,7 @@ export default function OperationsDashboard() {
         <div className="flex flex-col gap-8">
           <div>
             <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
-            <p className="text-subtext-light dark:text-subtext-dark mt-1">Welcome back, Alex. Here's what's happening today.</p>
+            <p className="text-subtext-light dark:text-subtext-dark mt-1">Welcome back, Alex. Here&apos;s what&apos;s happening today.</p>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
