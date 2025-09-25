@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function PartsPage() {
   const [uploadResult, setUploadResult] = useState(false);
@@ -70,7 +71,7 @@ export default function PartsPage() {
 
               {/* AI Photo Upload */}
               <div className="card p-6">
-                <h3 className="font-display text-xl font-bold mb-4 text-text-primary">Can't Find Your Part?</h3>
+                <h3 className="font-display text-xl font-bold mb-4 text-text-primary">Can&apos;t Find Your Part?</h3>
                 <p className="text-sm text-text-secondary mb-4">
                   Use our AI-powered tool to identify any part from a photo.
                 </p>
@@ -129,10 +130,12 @@ export default function PartsPage() {
               {/* Torque Converters */}
               <div className="card group flex cursor-pointer flex-col overflow-hidden rounded-xl transition-all hover:bg-base-card-hover hover:-translate-y-1">
                 <div className="relative h-48 w-full bg-base-surface flex items-center justify-center overflow-hidden">
-                  <img 
+                  <Image 
                     alt="Torque Converter" 
                     className="h-full w-full object-contain transition-transform group-hover:scale-105" 
                     src="https://lh3.googleusercontent.com/pw/AP1GczN-d55_sY462PqD1v0X1d497Uu9304j50rS2r_3j6yX1y5_1b4h2c3j4o5k6l7m8n9p0q1r2s3t4u5v6w7x8y9z0a=s500"
+                    width={500}
+                    height={500}
                   />
                 </div>
                 <div className="flex flex-1 flex-col p-4">
@@ -145,10 +148,12 @@ export default function PartsPage() {
               {/* Transmission Fluids */}
               <div className="card group flex cursor-pointer flex-col overflow-hidden rounded-xl transition-all hover:bg-base-card-hover hover:-translate-y-1">
                 <div className="relative h-48 w-full bg-base-surface flex items-center justify-center overflow-hidden">
-                  <img 
+                  <Image 
                     alt="Transmission Fluid" 
                     className="h-full w-full object-contain transition-transform group-hover:scale-105" 
                     src="https://lh3.googleusercontent.com/pw/AP1GczP2G1v0_1h2i3j4k5l6m7n8p9q0r1s2t3u4v5w6x7y8z9a0b1c2d3e4f5g6h7i8j9k0l1m2n3p4q5r=s500"
+                    width={500}
+                    height={500}
                   />
                 </div>
                 <div className="flex flex-1 flex-col p-4">
@@ -161,10 +166,12 @@ export default function PartsPage() {
               {/* Solenoid Packs */}
               <div className="card group flex cursor-pointer flex-col overflow-hidden rounded-xl transition-all hover:bg-base-card-hover hover:-translate-y-1">
                 <div className="relative h-48 w-full bg-base-surface flex items-center justify-center overflow-hidden">
-                  <img 
+                  <Image 
                     alt="Solenoid Packs" 
                     className="h-full w-full object-contain transition-transform group-hover:scale-105" 
                     src="https://lh3.googleusercontent.com/pw/AP1GczPz8y7x6w5v4u3t2s1r0q9p8o7n6m5l4k3j2i1h0g9f8e7d6c5b4a3z2y1x0w9v8u7t6s5r4q3p2o1=s500"
+                    width={500}
+                    height={500}
                   />
                 </div>
                 <div className="flex flex-1 flex-col p-4">
@@ -177,10 +184,12 @@ export default function PartsPage() {
               {/* Master Rebuild Kits */}
               <div className="card group flex cursor-pointer flex-col overflow-hidden rounded-xl transition-all hover:bg-base-card-hover hover:-translate-y-1">
                 <div className="relative h-48 w-full bg-base-surface flex items-center justify-center overflow-hidden">
-                  <img 
+                  <Image 
                     alt="Rebuild Kits" 
                     className="h-full w-full object-contain transition-transform group-hover:scale-105" 
                     src="https://lh3.googleusercontent.com/pw/AP1GczP5m4l3k2j1i0h9g8f7e6d5c4b3a2z1y0x9w8v7u6t5s4r3q2p1o0n9m8l7k6j5i4h3g2f1e0d9c8b7a=s500"
+                    width={500}
+                    height={500}
                   />
                 </div>
                 <div className="flex flex-1 flex-col p-4">
@@ -193,10 +202,12 @@ export default function PartsPage() {
               {/* Valve Bodies */}
               <div className="card group flex cursor-pointer flex-col overflow-hidden rounded-xl transition-all hover:bg-base-card-hover hover:-translate-y-1">
                 <div className="relative h-48 w-full bg-base-surface flex items-center justify-center overflow-hidden">
-                  <img 
+                  <Image 
                     alt="Valve Bodies" 
                     className="h-full w-full object-contain transition-transform group-hover:scale-105" 
                     src="https://lh3.googleusercontent.com/pw/AP1GczM_9a8b7c6d5e4f3g2h1i0j9k8l7m6n5p4q3r2s1t0u9v8w7x6y5z4a3b2c1d0e9f8g7h6i5j4k3l2=s500"
+                    width={500}
+                    height={500}
                   />
                 </div>
                 <div className="flex flex-1 flex-col p-4">
@@ -209,10 +220,12 @@ export default function PartsPage() {
               {/* Filters & Gaskets */}
               <div className="card group flex cursor-pointer flex-col overflow-hidden rounded-xl transition-all hover:bg-base-card-hover hover:-translate-y-1">
                 <div className="relative h-48 w-full bg-base-surface flex items-center justify-center overflow-hidden">
-                  <img 
+                  <Image 
                     alt="Transmission Filter" 
                     className="h-full w-full object-contain transition-transform group-hover:scale-105" 
                     src="https://lh3.googleusercontent.com/pw/AP1GczOC9s8r7q6p5o4n3m2l1k0j9i8h7g6f5e4d3c2b1a0z9y8x7w6v5u4t3s2r1q0p9o8n7m6l5=s500"
+                    width={500}
+                    height={500}
                   />
                 </div>
                 <div className="flex flex-1 flex-col p-4">
