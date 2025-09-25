@@ -81,10 +81,12 @@ export default function AutoSalesPage() {
               {/* Chevrolet Silverado */}
               <div className="card group flex cursor-pointer flex-col overflow-hidden rounded-xl transition-all hover:bg-base-card-hover hover:-translate-y-1">
                 <div className="relative overflow-hidden">
-                  <img 
+                  <Image 
                     alt="Chevrolet Silverado" 
                     className="h-56 w-full object-cover transition-transform group-hover:scale-105" 
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuASDbQXU8fvPTfZzJ-6h_jcFx7e4kwVfBbo8hf2fUfyOKaOJxu4hpKb3jdkf2IRzblO_9e6Rr5w7jx44UU3hqXN3KRFx2baztbnoXqq4PMhhuVo7OmBkJR0z6HL8H1NFsBRc7N9op9NBnpHQssmbo4Kj3GPoXA-5LwCjWWIHa6zGzOiaEbxWMqjvDp4yq0OhuNxjsLHGbnSHTi74_PYfhXWpBrhIp0UCeZ3khtsZHnDk1uct7Fz_YAeV8LBucGBC_eaERuri3PA54U"
+                    width={400}
+                    height={224}
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
                     <h3 className="font-display text-xl font-bold text-white">2019 Chevrolet Silverado</h3>
@@ -102,10 +104,12 @@ export default function AutoSalesPage() {
               {/* Toyota Tacoma */}
               <div className="card group flex cursor-pointer flex-col overflow-hidden rounded-xl transition-all hover:bg-base-card-hover hover:-translate-y-1">
                 <div className="relative overflow-hidden">
-                  <img 
+                  <Image 
                     alt="Toyota Tacoma" 
                     className="h-56 w-full object-cover transition-transform group-hover:scale-105" 
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1F6S0RZj0mG6g0e5Hb4JMGa8BZ_uAF2xrt5l20lNYkNFD-VrP_y21EI0Jgqe-NtZr_ItUTG5nJJEJqunLw-yYCv_uTxCgg3eIzDuloP8OEk9MbIskIQNss1vIj_au5-HLl6W37HPOuP3e-r_JasEfwkonpgAgOgCEoTZwkkmrgH7mU6IuJqg3gLDhLvkU9r016zgKwdeHmN8C7ubtd_nyKb9Jt9NU8tLYgHtzB3L86y5UT2ApIhsAiHa7jy7Mnm0W-7SMgYUN-AQ"
+                    width={400}
+                    height={224}
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
                     <h3 className="font-display text-xl font-bold text-white">2020 Toyota Tacoma</h3>
@@ -123,10 +127,12 @@ export default function AutoSalesPage() {
               {/* Dodge Ram 1500 */}
               <div className="card group flex cursor-pointer flex-col overflow-hidden rounded-xl transition-all hover:bg-base-card-hover hover:-translate-y-1">
                 <div className="relative overflow-hidden">
-                  <img 
+                  <Image 
                     alt="Dodge Ram 1500" 
                     className="h-56 w-full object-cover transition-transform group-hover:scale-105" 
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuAunC2eileArnDE82N4s1to-i3TvX3YxvegotQw_Rs5OIEOzZIgg-bBUvRXi9vcDEcgap45oYLmsmEvHvWC1OB_EQhlce9CX65hGonVRQv4jtci50mCP96HT1TuCIK7yChNPDwBRoC_PelotqP8BynVTpCZWUleSkhUlVWsqLbi4e4rv5PHusBVy3gZpI7M7BhLeWIwP9LWjUO0CKqghSEVBWpSRJ4Vrkw3zZf62GV7KXf9SwpjNru5-WTbIYmKSSNxERlvCzf2vzY"
+                    width={400}
+                    height={224}
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
                     <h3 className="font-display text-xl font-bold text-white">2017 Dodge Ram 1500</h3>

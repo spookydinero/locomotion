@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 
 export default function CustomerLanding() {
@@ -108,8 +109,8 @@ export default function CustomerLanding() {
               <div className="bg-brand-yellow h-2 rounded-full transition-all duration-1000" style={{width: '75%'}}></div>
             </div>
             <div className="flex justify-between items-end mt-4">
-              <img alt="Blue SUV" className="w-1/2 rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFdCEdRznAMCU4yC1OLy74FWsujf8eLaVi-Ht3oOhTfu-hJb5LcCTtpM-dftfz4wqtoHx499w6pTqmejzMYgZ0RwvouJ9uUh3bPsy090zNz8LWzzW41mAsBHjL7wvrbed1oG8KDfWtslH2Ct0zu4t9evRY_IIkhIoWxaPg_LhydSnnGQkggscULyMOI7x9nYWGj9WM8SAc-xu-Z3-p4-lg95OD8_GC24tOyV8IQRTCLDrn6OuJQzr1_DRGMGR_3wnoqi4onzAziWQb"/>
-              <img alt="QR Code" className="w-20 h-20 rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUpQ0R67INuzqMem27K4AK5xRs7-nZRSEFiFFDs2xH0ABQVYI3FW4ZRfjHZi--I1dTYI8WibxH-9pCWjGI-tBUVBtd9Rn75hhGhls8O59xoEsyuKFLeqnqlc-0Qk5BQu5UGYYyaInHh5T4KrDHG8L5qVYqA6s9oJW41bT_N7hOzkf4i_jmqBNP-oKZdcTAjyduOAwzZ22Dp8NxDjVeGo9VOU64eHZnRdv6AQIB6DgU7ov9ueBAkZB1R7EO1qat_0UQuZ-j76Xuw0-Y"/>
+              <Image alt="Blue SUV" className="w-1/2 rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFdCEdRznAMCU4yC1OLy74FWsujf8eLaVi-Ht3oOhTfu-hJb5LcCTtpM-dftfz4wqtoHx499w6pTqmejzMYgZ0RwvouJ9uUh3bPsy090zNz8LWzzW41mAsBHjL7wvrbed1oG8KDfWtslH2Ct0zu4t9evRY_IIkhIoWxaPg_LhydSnnGQkggscULyMOI7x9nYWGj9WM8SAc-xu-Z3-p4-lg95OD8_GC24tOyV8IQRTCLDrn6OuJQzr1_DRGMGR_3wnoqi4onzAziWQb" width={200} height={150}/>
+              <Image alt="QR Code" className="w-20 h-20 rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUpQ0R67INuzqMem27K4AK5xRs7-nZRSEFiFFDs2xH0ABQVYI3FW4ZRfjHZi--I1dTYI8WibxH-9pCWjGI-tBUVBtd9Rn75hhGhls8O59xoEsyuKFLeqnqlc-0Qk5BQu5UGYYyaInHh5T4KrDHG8L5qVYqA6s9oJW41bT_N7hOzkf4i_jmqBNP-oKZdcTAjyduOAwzZ22Dp8NxDjVeGo9VOU64eHZnRdv6AQIB6DgU7ov9ueBAkZB1R7EO1qat_0UQuZ-j76Xuw0-Y" width={80} height={80}/>
             </div>
             
             {/* Services Grid */}
@@ -231,10 +232,12 @@ export default function CustomerLanding() {
               </form>
             </div>
             <div className="relative">
-              <img 
+              <Image 
                 alt="A dark image of a car's rear, suggesting a repair in progress." 
                 className="rounded-lg" 
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkr1kdUYpn62Ucbmrbm3-FHALuFIDnqQLnMp5AZXNGsdrbpkDio9F9TsIl3s_3uBV53ykAhMUbMX4nh1rDUCijtagw0rNMeNeVK7VjJuAxmDPlOuVP8Gd3tYuaEEvD24fm6ZysgVTRk_68HFNVaDSNclSpLCMOwLNVcdxJ9saxhrJ9MUYrYLMpZOJAtw_86-8EhNXwid2jz82Qv4hWoTEM9VgMbaAORTScuztZIbABHNrGjRc1Ak1g2ag-VKJTy4HtlGlJiEuOED4"
+                width={400}
+                height={300}
               />
               <div className="absolute inset-0 bg-black bg-opacity-40 rounded-lg flex items-center justify-center">
                 <div className="card p-6 w-full max-w-sm mx-4">

@@ -15,17 +15,23 @@ export default function LoginForm() {
     setError('')
 
     try {
+      console.log('🔐 LoginForm: Starting login process...')
       const supabase = createClient()
-      const { error } = await supabase.auth.signInWithPassword({
+      const { data, error } = await supabase.auth.signInWithPassword({
         email,
         password,
       })
 
       if (error) {
+        console.error('❌ LoginForm: Login error:', error.message)
         setError(error.message)
+      } else {
+        console.log('✅ LoginForm: Login successful:', data.user?.email)
+        console.log('🔄 LoginForm: Waiting for auth state change...')
       }
       // Redirect will be handled by the auth state change in useAuth
     } catch (err) {
+      console.error('❌ LoginForm: Unexpected error:', err)
       setError(err instanceof Error ? err.message : 'An unexpected error occurred')
     } finally {
       setLoading(false)

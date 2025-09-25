@@ -64,26 +64,32 @@ export default function WarrantyManagementPage() {
               <h2 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Evidence</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="col-span-2 md:col-span-2 md:row-span-2 rounded-lg overflow-hidden group relative">
-                  <img 
+                  <Image 
                     alt="Evidence photo 1" 
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" 
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuDywHGBCwhJ7OH-dvDI872c5S02tTnzWCvzlS-IkGU8InemzGz_AMEdPheWypft35qYP_gPbCInBFi5unUJO1fDKXQk75kZx8S3YjEc9R0fxhFet4WD0mOGpVaUSe9sxNwFyHNl1Jm2Ju3ZOs1DabcFD-nGcIiKUY_D9Tjv4z5UEpJD6qUvTlvE8pFwlsZMkp-AU30HSyZu-ugocRGj63vZwHXSvK9kKoV58xikV8OKO3yy1oFOysT4WpIoq-qW2950ASFBqmtLcao"
+                    width={400}
+                    height={300}
                   />
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 <div className="col-span-1 md:col-span-2 rounded-lg overflow-hidden group relative">
-                  <img 
+                  <Image 
                     alt="Evidence photo 2" 
                     className="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105" 
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF532qSq5PyeJd11lYiWLGJ85GaC446q4IBYqG9XYAK4GgC1O_BEpIlYjNTWDzQrbkY09Jl31ZEfw9zRA5pkN814MAnfDFTQ3BH2amRLBBOit9oyxspq4dr3_PL-XSJ-wi54Y6jA3eXOxlCAkGdC7Mw991MvDdCCApzg9ZQIchOL2O1X8k2mr_q8nUTxWPczhZ-NXqI3T67koos0O9OxikCO_cpbCREoLltxISfRACjlFncECyLIcAkLbnJsv4C1e6A5IYn0Eokeg"
+                    width={400}
+                    height={160}
                   />
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 <div className="col-span-1 md:col-span-2 rounded-lg overflow-hidden group relative">
-                  <img 
+                  <Image 
                     alt="Evidence photo 3" 
                     className="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105" 
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNCgp79GsO3ez2e7ssdz1VURp0deHR4voYA2jVtcPzvP3HSe0pAaPjnjgFwGxgd6n93xBYa0ILUYMVq3WFyXjaji9PN25VlMIbWRmwqEXwsACSDKetqwEHMLm4TRfhuTt147YkP6QTzN5551ieoTXFZLvatp2HnJTKaMOtpNYpQI8tDxXXYZteHpp3-W023K4kHJLvIKn_NjwI8sRAFIA0X5iGHsW5IR9OPeAfizqVIejPOkS4eYyoQfnQNXGZJDu7hO84dL1rVhM"
+                    width={400}
+                    height={160}
                   />
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>

@@ -1,13 +1,13 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { getWorkOrders, createWorkOrder, updateWorkOrder, deleteWorkOrder, getEntities, getCustomers, getVehicles } from '@/lib/database'
 import { useAuth, usePermissions } from '@/lib/auth'
-import type { WorkOrder, WorkOrderWithJoins, Customer, Vehicle, Entity } from '@/lib/types'
+import type { WorkOrderWithJoins, Customer, Vehicle, Entity } from '@/lib/types'
 
 export default function WorkOrdersPage() {
   const { user, loading: authLoading } = useAuth()
-  const { hasPermission, userEntities, isTechnician } = usePermissions()
+  const { hasPermission, userEntities } = usePermissions()
 
   const [workOrders, setWorkOrders] = useState<WorkOrderWithJoins[]>([])
   const [entities, setEntities] = useState<Entity[]>([])
@@ -26,13 +26,7 @@ export default function WorkOrdersPage() {
   const canUpdateWorkOrders = hasPermission('write') || hasPermission('all')
   const canDeleteWorkOrders = hasPermission('write') || hasPermission('all')
 
-  useEffect(() => {
-    if (!authLoading && user) {
-      loadData()
-    }
-  }, [authLoading, user])
-
-  const loadData = async () => {
+  const loadData = useCallback(async () => {
     setLoading(true)
     try {
       const [workOrdersRes, entitiesRes, customersRes, vehiclesRes] = await Promise.all([
@@ -55,7 +49,13 @@ export default function WorkOrdersPage() {
     } finally {
       setLoading(false)
     }
-  }
+  }, [userEntities])
+
+  useEffect(() => {
+    if (!authLoading && user) {
+      loadData()
+    }
+  }, [authLoading, user, loadData])
 
   const handleCreateWorkOrder = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -220,7 +220,7 @@ export default function WorkOrdersPage() {
                     <label className="block text-sm font-medium text-gray-700">Priority</label>
                     <select
                       value={priority}
-                      onChange={(e) => setPriority(e.target.value as any)}
+                      onChange={(e) => setPriority(e.target.value as 'low' | 'normal' | 'high' | 'urgent')}
                       className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2"
                     >
                       <option value="low">Low</option>

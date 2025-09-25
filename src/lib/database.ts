@@ -8,6 +8,8 @@ import type {
   CreateCustomerData,
   Vehicle,
   CreateVehicleData,
+  Entity,
+  User,
   ApiResponse,
   PaginatedResponse
 } from './types';
@@ -73,7 +75,7 @@ export async function getWorkOrders(
         limit
       }
     };
-  } catch (err) {
+  } catch {
     return { error: 'Failed to fetch work orders' };
   }
 }
@@ -119,7 +121,7 @@ export async function getWorkOrderById(id: string): Promise<ApiResponse<WorkOrde
     }
 
     return { data };
-  } catch (err) {
+  } catch {
     return { error: 'Failed to fetch work order' };
   }
 }
@@ -151,7 +153,7 @@ export async function createWorkOrder(
     }
 
     return { data };
-  } catch (err) {
+  } catch {
     return { error: 'Failed to create work order' };
   }
 }
@@ -173,7 +175,7 @@ export async function updateWorkOrder(
     }
 
     return { data };
-  } catch (err) {
+  } catch {
     return { error: 'Failed to update work order' };
   }
 }
@@ -190,7 +192,7 @@ export async function deleteWorkOrder(id: string): Promise<ApiResponse<boolean>>
     }
 
     return { data: true };
-  } catch (err) {
+  } catch {
     return { error: 'Failed to delete work order' };
   }
 }
@@ -234,7 +236,7 @@ export async function getCustomers(
         limit
       }
     };
-  } catch (err) {
+  } catch {
     return { error: 'Failed to fetch customers' };
   }
 }
@@ -254,7 +256,7 @@ export async function createCustomer(
     }
 
     return { data };
-  } catch (err) {
+  } catch {
     return { error: 'Failed to create customer' };
   }
 }
@@ -306,7 +308,7 @@ export async function getVehicles(
         limit
       }
     };
-  } catch (err) {
+  } catch {
     return { error: 'Failed to fetch vehicles' };
   }
 }
@@ -345,7 +347,7 @@ export async function createVehicle(
     }
 
     return { data: updatedVehicle };
-  } catch (err) {
+  } catch {
     return { error: 'Failed to create vehicle' };
   }
 }
@@ -367,29 +369,37 @@ export async function getEntities(): Promise<ApiResponse<Entity[]>> {
     }
 
     return { data };
-  } catch (err) {
+  } catch {
     return { error: 'Failed to fetch entities' };
   }
 }
 
 export async function getCurrentUser(): Promise<ApiResponse<User>> {
   try {
+    console.log('🔍 getCurrentUser: Starting authentication check...');
     const { data: { user }, error } = await supabase.auth.getUser();
 
     if (error) {
+      console.error('❌ getCurrentUser: Auth error:', error.message);
       return { error: error.message };
     }
 
     if (!user) {
+      console.log('❌ getCurrentUser: No user logged in');
       return { error: 'No user logged in' };
     }
+
+    console.log('✅ getCurrentUser: User found:', user.email);
 
     // Get the session to access the token
     const { data: { session } } = await supabase.auth.getSession();
     
     if (!session?.access_token) {
+      console.error('❌ getCurrentUser: No valid session');
       return { error: 'No valid session' };
     }
+
+    console.log('✅ getCurrentUser: Session found, calling /api/user...');
 
     // Use the server-side API route to fetch user profile
     const response = await fetch('/api/user', {
@@ -399,15 +409,20 @@ export async function getCurrentUser(): Promise<ApiResponse<User>> {
       }
     });
 
+    console.log('📡 getCurrentUser: API response status:', response.status);
+
     if (!response.ok) {
       const errorData = await response.json();
+      console.error('❌ getCurrentUser: API error:', errorData);
       return { error: errorData.error || 'Failed to fetch user profile' };
     }
 
     const profileData = await response.json();
+    console.log('✅ getCurrentUser: Profile loaded successfully:', profileData.data?.email);
     return profileData;
 
-  } catch (err) {
+  } catch (error) {
+    console.error('❌ getCurrentUser: Unexpected error:', error);
     return { error: 'Failed to get current user' };
   }
 }
