@@ -26,7 +26,7 @@ export default function PartsPage() {
       {/* Mobile Layout */}
       <div className="md:hidden max-w-sm mx-auto bg-base-bg p-3">
         <header className="flex justify-between items-center py-3">
-          <h1 className="text-xl font-extrabold tracking-widest text-brand-yellow">LOCOMOTION</h1>
+          <Link href="/" className="text-xl font-extrabold tracking-widest text-brand-yellow hover:text-brand-yellow/80 transition-colors cursor-pointer">LOCOMOTION</Link>
           <button 
             className="text-text-primary p-2 min-w-[48px] min-h-[48px] flex items-center justify-center hover:text-brand-yellow transition-colors"
             aria-label="Toggle navigation menu"
@@ -39,7 +39,7 @@ export default function PartsPage() {
       {/* Desktop Layout */}
       <div className="hidden md:block max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <header className="flex justify-between items-center py-6">
-          <div className="text-3xl font-bold text-brand-yellow">LOCOMOTION</div>
+          <Link href="/" className="text-3xl font-bold text-brand-yellow hover:text-brand-yellow/80 transition-colors cursor-pointer">LOCOMOTION</Link>
           <nav className="hidden md:flex items-center space-x-4 text-sm font-medium text-text-secondary">
             <Link href="/track-vehicle" className="hover:text-text-primary transition-colors py-2 px-4 rounded min-h-[48px] flex items-center whitespace-nowrap">Track Vehicle</Link>
             <Link href="/auto-sales" className="hover:text-text-primary transition-colors py-2 px-4 rounded min-h-[48px] flex items-center whitespace-nowrap">Auto Sales</Link>

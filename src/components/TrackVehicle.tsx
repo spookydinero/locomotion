@@ -25,7 +25,7 @@ export default function TrackVehicle() {
       {/* Mobile Layout */}
       <div className="md:hidden">
         <header className="flex justify-between items-center py-6 px-4">
-          <div className="text-3xl font-bold text-brand-yellow">LOCOMOTION</div>
+          <Link href="/" className="text-3xl font-bold text-brand-yellow hover:text-brand-yellow/80 transition-colors cursor-pointer">LOCOMOTION</Link>
           <div className="flex items-center space-x-4">
             <Link href="/login" className="btn-primary px-6 py-2">
               Login
@@ -37,7 +37,7 @@ export default function TrackVehicle() {
       {/* Desktop Layout */}
       <div className="hidden md:block max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <header className="flex justify-between items-center py-6">
-          <div className="text-3xl font-bold text-brand-yellow">LOCOMOTION</div>
+          <Link href="/" className="text-3xl font-bold text-brand-yellow hover:text-brand-yellow/80 transition-colors cursor-pointer">LOCOMOTION</Link>
           <nav className="hidden md:flex items-center space-x-4 text-sm font-medium text-text-secondary">
             <Link href="/track-vehicle" className="hover:text-text-primary transition-colors py-2 px-4 rounded min-h-[48px] flex items-center whitespace-nowrap">Track Vehicle</Link>
             <Link href="/auto-sales" className="hover:text-text-primary transition-colors py-2 px-4 rounded min-h-[48px] flex items-center whitespace-nowrap">Auto Sales</Link>
