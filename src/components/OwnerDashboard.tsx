@@ -308,7 +308,7 @@ export default function OwnerDashboard() {
               Welcome back, {profile?.full_name || (user?.email ?? 'User')}
             </h2>
             <p className="text-gray-600 dark:text-gray-400">
-              Here's your real-time business performance overview
+              Here&apos;s your real-time business performance overview
             </p>
           </div>
 

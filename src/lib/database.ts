@@ -354,7 +354,7 @@ export async function createVehicle(
 // UTILITY FUNCTIONS
 // ===========================================
 
-export async function getEntities(): Promise<ApiResponse<any[]>> {
+export async function getEntities(): Promise<ApiResponse<Entity[]>> {
   try {
     const { data, error } = await supabase
       .from('entities')
@@ -372,7 +372,7 @@ export async function getEntities(): Promise<ApiResponse<any[]>> {
   }
 }
 
-export async function getCurrentUser(): Promise<ApiResponse<any>> {
+export async function getCurrentUser(): Promise<ApiResponse<User>> {
   try {
     const { data: { user }, error } = await supabase.auth.getUser();
 
