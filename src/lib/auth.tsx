@@ -37,14 +37,22 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
             id: session.user.id, 
             email: session.user.email || '',
             full_name: session.user.email || '',
-            entity_id: 'default'
+            role_id: 'default-role',
+            entity_access: ['default'],
+            is_active: true,
+            created_at: new Date().toISOString(),
+            updated_at: new Date().toISOString()
           } as User)
           setProfile({ 
             id: session.user.id, 
             email: session.user.email || '',
             full_name: session.user.email || '',
-            entity_id: 'default',
-            roles: { name: 'manager', permissions: [] } as Role
+            role_id: 'default-role',
+            entity_access: ['default'],
+            is_active: true,
+            created_at: new Date().toISOString(),
+            updated_at: new Date().toISOString(),
+            roles: { id: 'default-role', name: 'manager', permissions: [], created_at: new Date().toISOString() } as Role
           } as User & { roles: Role })
         } else if (event === 'SIGNED_OUT') {
           console.log('👋 User signed out')

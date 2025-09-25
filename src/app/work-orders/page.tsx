@@ -2,12 +2,11 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { getWorkOrders, createWorkOrder, updateWorkOrder, deleteWorkOrder, getEntities, getCustomers, getVehicles } from '@/lib/database'
-import { useAuth, usePermissions } from '@/lib/auth'
+import { useAuth } from '@/lib/auth'
 import type { WorkOrderWithJoins, Customer, Vehicle, Entity } from '@/lib/types'
 
 export default function WorkOrdersPage() {
-  const { user, loading: authLoading } = useAuth()
-  const { hasPermission, userEntities } = usePermissions()
+  const { user, loading: authLoading, hasPermission, hasEntityAccess } = useAuth()
 
   const [workOrders, setWorkOrders] = useState<WorkOrderWithJoins[]>([])
   const [entities, setEntities] = useState<Entity[]>([])
@@ -39,7 +38,7 @@ export default function WorkOrdersPage() {
       if (workOrdersRes.data) setWorkOrders(workOrdersRes.data.data)
       if (entitiesRes.data) {
         // Filter entities based on user access
-        const accessibleEntities = entitiesRes.data.filter(entity => userEntities.includes(entity.id))
+        const accessibleEntities = entitiesRes.data.filter(entity => hasEntityAccess(entity.id))
         setEntities(accessibleEntities)
       }
       if (customersRes.data) setCustomers(customersRes.data.data)
@@ -49,7 +48,7 @@ export default function WorkOrdersPage() {
     } finally {
       setLoading(false)
     }
-  }, [userEntities])
+  }, [hasEntityAccess])
 
   useEffect(() => {
     if (!authLoading && user) {
