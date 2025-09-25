@@ -47,18 +47,14 @@ export default function CustomerLanding() {
               <Link href="/auto-sales" className="text-text-primary font-medium py-3 px-4 rounded hover:bg-base-card-hover transition-colors block min-h-[48px] flex items-center">
                 Auto Sales
               </Link>
-              <a className="text-text-primary font-medium py-3 px-4 rounded hover:bg-base-card-hover transition-colors block min-h-[48px] flex items-center" href="#services">
-                Services
-              </a>
+
               <Link href="/parts" className="text-text-primary font-medium py-3 px-4 rounded hover:bg-base-card-hover transition-colors block min-h-[48px] flex items-center">
                 Parts
               </Link>
               <Link href="/locations" className="text-text-primary font-medium py-3 px-4 rounded hover:bg-base-card-hover transition-colors block min-h-[48px] flex items-center">
                 Locations
               </Link>
-              <a className="text-text-primary font-medium py-3 px-4 rounded hover:bg-base-card-hover transition-colors block min-h-[48px] flex items-center" href="#contact">
-                Contact
-              </a>
+
               <div className="border-t border-base-border pt-2 mt-2">
                 <Link href="/login" className="text-text-secondary font-medium py-3 px-4 rounded hover:bg-base-card-hover transition-colors block min-h-[48px] flex items-center">
                   Owner Dashboards
@@ -186,10 +182,10 @@ export default function CustomerLanding() {
           <nav className="hidden md:flex items-center space-x-4 text-sm font-medium text-text-secondary">
             <Link href="/track-vehicle" className="hover:text-text-primary transition-colors py-2 px-4 rounded min-h-[48px] flex items-center whitespace-nowrap">Track Vehicle</Link>
             <Link href="/auto-sales" className="hover:text-text-primary transition-colors py-2 px-4 rounded min-h-[48px] flex items-center whitespace-nowrap">Auto Sales</Link>
-            <a className="hover:text-text-primary transition-colors py-2 px-4 rounded min-h-[48px] flex items-center whitespace-nowrap" href="#services">Services</a>
+
             <Link href="/parts" className="hover:text-text-primary transition-colors py-2 px-4 rounded min-h-[48px] flex items-center whitespace-nowrap">Parts</Link>
             <Link href="/locations" className="hover:text-text-primary transition-colors py-2 px-4 rounded min-h-[48px] flex items-center whitespace-nowrap">Locations</Link>
-            <a className="hover:text-text-primary transition-colors py-2 px-4 rounded min-h-[48px] flex items-center whitespace-nowrap" href="#contact">Contact</a>
+
           </nav>
           <div className="flex items-center space-x-4">
             <Link href="/login" className="btn-primary px-6 py-2">
