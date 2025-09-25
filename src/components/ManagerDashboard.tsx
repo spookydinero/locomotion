@@ -25,6 +25,7 @@ export default function ManagerDashboard() {
             </div>
             <nav className="hidden md:flex items-center space-x-8">
               <a className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="/operations-dashboard">Dashboard</a>
+              <a className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="/work-orders">Work Orders</a>
               <a className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="/lifts-management">Lifts</a>
               <a className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="/quotes-pos">Quotes & POs</a>
               <a className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="/inventory-management">Inventory</a>
@@ -57,6 +58,14 @@ export default function ManagerDashboard() {
                     <span className="material-symbols-outlined">dashboard</span>
                   </div>
                   <h3 className="text-base font-bold text-gray-800 dark:text-gray-200">Operations Dashboard</h3>
+                </div>
+              </a>
+              <a className="group block rounded-lg p-6 bg-white dark:bg-background-dark/50 border border-gray-200 dark:border-gray-800 hover:shadow-lg hover:border-primary dark:hover:border-primary transition-all duration-300" href="/work-orders">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 rounded-lg bg-primary/10 text-primary">
+                    <span className="material-symbols-outlined">assignment</span>
+                  </div>
+                  <h3 className="text-base font-bold text-gray-800 dark:text-gray-200">Work Orders</h3>
                 </div>
               </a>
               <a className="group block rounded-lg p-6 bg-white dark:bg-background-dark/50 border border-gray-200 dark:border-gray-800 hover:shadow-lg hover:border-primary dark:hover:border-primary transition-all duration-300" href="/lifts-management">

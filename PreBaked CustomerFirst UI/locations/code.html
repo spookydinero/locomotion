@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Locomotion TX - Our Locations</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+    :root {
+      --color-primary: #FFD700;--color-background-dark: #000000;
+      --color-surface-dark: #1A1A1A;
+      --color-border-dark: #444444;--color-text-primary-dark: #FFFFFF;
+      --color-text-secondary-dark: #BDBDBD;
+    }
+    .pin {
+      position: absolute;
+      transform: translate(-50%, -100%);
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+    }
+    .pin:hover {
+      transform: translate(-50%, -100%) scale(1.1);
+    }
+    .pin .pin-body {
+        width: 32px;
+        height: 32px;
+        border-radius: 50% 50% 50% 0;
+        background: var(--color-primary);
+        transform: rotate(-45deg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .pin .pin-body .material-symbols-outlined {
+        transform: rotate(45deg);
+        color: var(--color-background-dark);
+    }
+     .pin .pin-stem {
+        width: 4px;
+        height: 10px;
+        background: var(--color-primary);
+        position: absolute;
+        bottom: -6px;
+        left: 50%;
+        transform: translateX(-50%);
+        display:none;}
+    .info-popup {
+      display: none;
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 240px;
+      z-index: 10;
+    }
+    .pin:hover .info-popup, .pin.active .info-popup {
+      display: block;
+    }
+    </style>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "var(--color-primary)",
+              "background-dark": "var(--color-background-dark)",
+              "surface-dark": "var(--color-surface-dark)",
+              "border-dark": "var(--color-border-dark)",
+              "text-primary-dark": "var(--color-text-primary-dark)",
+              "text-secondary-dark": "var(--color-text-secondary-dark)",
+            },
+            fontFamily: {
+              display: ["Montserrat", "sans-serif"],
+              body: ["Open Sans", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "1rem",
+            },
+          },
+        },
+      };
+    </script>
+</head>
+<body class="bg-background-dark font-body text-text-primary-dark">
+<div class="flex min-h-screen w-full flex-col">
+<header class="sticky top-0 z-50 border-b border-border-dark bg-surface-dark/90 backdrop-blur-sm">
+<div class="container mx-auto flex items-center justify-between px-4 py-4 lg:px-8">
+<div class="flex items-center gap-8">
+<a class="flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-primary text-3xl">directions_car</span>
+<h1 class="font-display text-2xl font-bold uppercase tracking-wider">Locomotion TX</h1>
+</a>
+<nav class="hidden items-center gap-6 md:flex">
+<a class="text-sm font-semibold uppercase tracking-wide hover:text-primary transition-colors" href="#">Repairs</a>
+<a class="text-sm font-semibold uppercase tracking-wide hover:text-primary transition-colors" href="#">Parts</a>
+<a class="text-sm font-semibold uppercase tracking-wide hover:text-primary transition-colors" href="#">Used Autos</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="rounded-md p-2 hover:bg-primary/20 transition-colors md:hidden">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<button class="hidden sm:flex items-center justify-center rounded-md bg-primary px-6 py-2.5 font-display text-sm font-bold text-background-dark transition-transform hover:scale-105">
+              Contact Us
+            </button>
+</div>
+</div>
+</header>
+<main class="container mx-auto flex-grow px-4 py-8 lg:px-8 lg:py-12">
+<div class="flex flex-col lg:flex-row gap-8">
+<div class="lg:w-1/3 xl:w-1/4 space-y-6">
+<div class="bg-surface-dark border border-border-dark rounded-xl p-6">
+<h2 class="font-display text-2xl font-bold mb-4">Our Locations</h2>
+<div class="flex border-b border-border-dark">
+<button class="flex-1 py-3 px-2 text-sm font-semibold border-b-2 border-primary text-primary transition-colors">TX Shops/Parts</button>
+<button class="flex-1 py-3 px-2 text-sm font-semibold text-text-secondary-dark hover:text-primary hover:border-primary/50 border-b-2 border-transparent transition-colors">Mexico Ops</button>
+</div>
+<div class="mt-6 space-y-4">
+<div class="p-4 rounded-lg bg-background-dark border border-transparent hover:border-primary transition-colors cursor-pointer">
+<h3 class="font-display font-bold text-lg">Arlington, TX</h3>
+<p class="text-sm text-text-secondary-dark">1234 E Main St, Arlington, TX 76010</p>
+<p class="text-sm font-semibold text-primary mt-1">(817) 555-1234</p>
+</div>
+<div class="p-4 rounded-lg bg-background-dark border border-transparent hover:border-primary transition-colors cursor-pointer">
+<h3 class="font-display font-bold text-lg">Mansfield, TX</h3>
+<p class="text-sm text-text-secondary-dark">5678 W Broad St, Mansfield, TX 76063</p>
+<p class="text-sm font-semibold text-primary mt-1">(817) 555-5678</p>
+</div>
+<div class="p-4 rounded-lg bg-background-dark border border-transparent hover:border-primary transition-colors cursor-pointer">
+<h3 class="font-display font-bold text-lg">Houston, TX</h3>
+<p class="text-sm text-text-secondary-dark">9101 S Sam Houston Pkwy, Houston, TX 77075</p>
+<p class="text-sm font-semibold text-primary mt-1">(713) 555-9101</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-dark border border-border-dark rounded-xl p-6">
+<h3 class="font-display text-xl font-bold mb-3">Find Nearest Location</h3>
+<button class="w-full flex items-center justify-center gap-2 rounded-md bg-primary py-3 font-display font-bold text-background-dark transition-transform hover:scale-105">
+<span class="material-symbols-outlined">my_location</span>
+<span>Use My Location</span>
+</button>
+</div>
+</div>
+<div class="lg:w-2/3 xl:w-3/4 h-[60vh] lg:h-auto bg-surface-dark border border-border-dark rounded-xl overflow-hidden relative">
+<img alt="Map of Texas" class="w-full h-full object-cover opacity-30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPGei7JU5gL47jHZtJfahpIizVMDmji0XIL6GJHEBsz8itqTsrub0_llherleTO-3pLB5NoalpkvmFLW2YIdVqBo0VoojMEpS-YM1Jyg8fjaRBD7kMrNkFuoQq5cTin44hlouUNfNvii8N3lcV_cZu3PtlRHo2zk-72v9H0E_Y2UQv-mhunlR_iTysst6nc7YnMJ7LuMITSpX842VEoSzMwAcMGbGnaGP_rMZw3VrdClGXscXvw6vP9vmeZmWLi-NrbSZCJgieg_8"/>
+<div class="absolute inset-0">
+<div class="pin" style="top: 45%; left: 48%;">
+<div class="pin-body">
+<span class="material-symbols-outlined">build</span>
+</div>
+<div class="info-popup">
+<div class="bg-surface-dark border border-border-dark rounded-lg p-3 shadow-lg text-sm">
+<h4 class="font-display font-bold text-base">Arlington</h4>
+<p class="text-text-secondary-dark">1234 E Main St</p>
+<p class="text-primary font-semibold">(817) 555-1234</p>
+</div>
+</div>
+</div>
+<div class="pin" style="top: 48%; left: 47.5%;">
+<div class="pin-body">
+<span class="material-symbols-outlined">build</span>
+</div>
+<div class="info-popup">
+<div class="bg-surface-dark border border-border-dark rounded-lg p-3 shadow-lg text-sm">
+<h4 class="font-display font-bold text-base">Mansfield</h4>
+<p class="text-text-secondary-dark">5678 W Broad St</p>
+<p class="text-primary font-semibold">(817) 555-5678</p>
+</div>
+</div>
+</div>
+<div class="pin" style="top: 75%; left: 58%;">
+<div class="pin-body">
+<span class="material-symbols-outlined">warehouse</span>
+</div>
+<div class="info-popup">
+<div class="bg-surface-dark border border-border-dark rounded-lg p-3 shadow-lg text-sm">
+<h4 class="font-display font-bold text-base">Houston</h4>
+<p class="text-text-secondary-dark">9101 S Sam Houston Pkwy</p>
+<p class="text-primary font-semibold">(713) 555-9101</p>
+</div>
+</div>
+</div>
+<div class="pin active" style="top: 65%; left: 18%;">
+<div class="pin-body">
+<span class="material-symbols-outlined">precision_manufacturing</span>
+</div>
+<div class="info-popup">
+<div class="bg-surface-dark border border-border-dark rounded-lg p-3 shadow-lg text-sm">
+<h4 class="font-display font-bold text-base">Juarez, MX</h4>
+<p class="text-text-secondary-dark">Av. de las Torres 2050</p>
+<p class="text-primary font-semibold">+52 656 555 2050</p>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute bottom-4 right-4 flex flex-col gap-2">
+<button class="bg-surface-dark/80 backdrop-blur-sm border border-border-dark rounded-md w-10 h-10 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-colors"><span class="material-symbols-outlined">add</span></button>
+<button class="bg-surface-dark/80 backdrop-blur-sm border border-border-dark rounded-md w-10 h-10 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-colors"><span class="material-symbols-outlined">remove</span></button>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-surface-dark border-t border-border-dark mt-12">
+<div class="container mx-auto px-4 py-8 lg:px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="col-span-2 md:col-span-1">
+<a class="flex items-center gap-2 mb-4" href="#">
+<span class="material-symbols-outlined text-primary text-3xl">directions_car</span>
+<h1 class="font-display text-2xl font-bold uppercase">Locomotion TX</h1>
+</a>
+<p class="text-sm text-text-secondary-dark">Your trusted partner in automotive transmission repair, parts, and sales.</p>
+</div>
+<div>
+<h4 class="font-display font-bold mb-4 uppercase">Services</h4>
+<ul class="space-y-2 text-sm">
+<li><a class="text-text-secondary-dark hover:text-primary transition-colors" href="#">Transmission Repair</a></li>
+<li><a class="text-text-secondary-dark hover:text-primary transition-colors" href="#">Parts Sales</a></li>
+<li><a class="text-text-secondary-dark hover:text-primary transition-colors" href="#">Used Auto Sales</a></li>
+<li><a class="text-text-secondary-dark hover:text-primary transition-colors" href="#">Diagnostics</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-display font-bold mb-4 uppercase">Company</h4>
+<ul class="space-y-2 text-sm">
+<li><a class="text-text-secondary-dark hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="text-text-secondary-dark hover:text-primary transition-colors" href="#">Locations</a></li>
+<li><a class="text-text-secondary-dark hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="text-text-secondary-dark hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-8 pt-8 border-t border-border-dark text-center text-xs text-text-secondary-dark">
+<p>© 2024 Locomotion TX. All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>

@@ -1,0 +1,29 @@
+{
+  "font": {
+    "display": { "family": "'Inter', ui-sans-serif, system-ui", "weights": [700, 800] },
+    "ui": { "family": "'Inter', ui-sans-serif, system-ui", "weights": [400, 500, 600] }
+  },
+  "color": {
+    "brand": { "yellow": "#FFD700", "yellowAccent": "#FFC107", "red": "#DC143C", "white": "#FFFFFF", "silver": "#C0C0C0" },
+    "base": { "black": "#000000", "bg": "#0B0D0F", "surface": "#111317", "surfaceAlt": "#161A20", "card": "#14181F", "border": "#2A2F39", "divider": "rgba(255,255,255,0.06)" },
+    "text": { "primary": "#FFFFFF", "secondary": "#C7CDD4", "muted": "#9AA3AF", "inverse": "#0B0D0F" },
+    "states": { "success": "#22C55E", "warning": "#EAB308", "inactive": "#6B7280" }
+  },
+  "gradient": {
+    "hero": "linear-gradient(180deg, #000000 0%, #0F1115 60%, #12151A 100%)",
+    "cta": "linear-gradient(180deg, #FFD700 0%, #FFC107 100%)"
+  },
+  "radius": { "xs": 6, "sm": 8, "md": 12, "lg": 16, "xl": 20, "full": 9999 },
+  "shadow": {
+    "sm": "0 1px 2px rgba(0,0,0,0.40)",
+    "md": "0 6px 16px rgba(0,0,0,0.50)",
+    "lg": "0 10px 30px rgba(0,0,0,0.55)"
+  },
+  "typescale": {
+    "h1": { "size": "clamp(32px, 5vw, 56px)", "weight": 800, "line": 1.05, "track": "-0.01em" },
+    "h2": { "size": "clamp(24px, 3.5vw, 36px)", "weight": 800, "line": 1.10 },
+    "h3": { "size": "22px", "weight": 700, "line": 1.15 },
+    "body": { "size": "16px", "weight": 500, "line": 1.50 },
+    "small": { "size": "14px", "weight": 500, "line": 1.45 }
+  }
+}

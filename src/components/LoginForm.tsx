@@ -23,10 +23,8 @@ export default function LoginForm() {
 
       if (error) {
         setError(error.message)
-      } else {
-        // Redirect will be handled by the auth state change
-        window.location.reload()
       }
+      // Redirect will be handled by the auth state change in useAuth
     } catch (err) {
       setError(err instanceof Error ? err.message : 'An unexpected error occurred')
     } finally {

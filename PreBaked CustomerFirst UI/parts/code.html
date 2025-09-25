@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Locomotion TX - Parts Inventory</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#FFD700", // Yellow accent
+            'background-dark': '#000000',
+            'surface-dark': '#1A1A1A',
+            'border-dark': '#C0C0C0', // Silver
+            'text-primary-dark': '#FFFFFF',
+            'text-secondary-dark': '#BDBDBD',
+          },
+          fontFamily: {
+            display: ["Montserrat", "sans-serif"],
+            body: ["Open Sans", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-background-dark font-body text-text-primary-dark">
+<div class="flex min-h-screen w-full flex-col">
+<header class="sticky top-0 z-50 border-b border-border-dark/30 bg-background-dark/80 backdrop-blur-sm">
+<div class="container mx-auto flex items-center justify-between px-4 py-4 lg:px-8">
+<div class="flex items-center gap-8">
+<a class="flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-primary text-3xl">precision_manufacturing</span>
+<h1 class="font-display text-2xl font-bold uppercase">Locomotion TX</h1>
+</a>
+<nav class="hidden items-center gap-6 md:flex">
+<a class="text-sm font-semibold uppercase tracking-wider text-text-secondary-dark hover:text-primary transition-colors" href="#">Transmission Repair</a>
+<a class="text-sm font-semibold uppercase tracking-wider text-primary" href="#">Parts Sales</a>
+<a class="text-sm font-semibold uppercase tracking-wider text-text-secondary-dark hover:text-primary transition-colors" href="#">Used Auto Sales</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="rounded-full p-2 hover:bg-primary/20 transition-colors md:hidden">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<button class="flex items-center justify-center rounded-md bg-primary px-6 py-2.5 font-display text-sm font-bold text-black transition-transform hover:scale-105">
+              Contact Us
+            </button>
+</div>
+</div>
+</header>
+<main class="container mx-auto flex-grow px-4 py-12 lg:px-8">
+<div class="grid grid-cols-1 gap-12 lg:grid-cols-4">
+<aside class="lg:col-span-1">
+<div class="sticky top-28 space-y-8">
+<div class="rounded-lg border border-border-dark/50 bg-surface-dark p-6">
+<h3 class="font-display text-xl font-bold mb-4">Select Division</h3>
+<div class="flex space-x-2 rounded-lg bg-background-dark p-1">
+<button class="flex-1 rounded-md py-2 text-sm font-semibold transition-colors bg-primary text-black">Arlington</button>
+<button class="flex-1 rounded-md py-2 text-sm font-semibold text-text-secondary-dark transition-colors hover:bg-primary/20">Houston</button>
+</div>
+</div>
+<div class="rounded-lg border border-border-dark/50 bg-surface-dark p-6">
+<h3 class="font-display text-xl font-bold mb-4">Can't Find Your Part?</h3>
+<p class="text-sm text-text-secondary-dark mb-4">
+              Use our AI-powered tool to identify any part from a photo.
+            </p>
+<button class="w-full flex items-center justify-center gap-2 rounded-md border-2 border-primary py-3 font-display font-bold text-primary transition-colors hover:bg-primary hover:text-black" id="upload-btn">
+<span class="material-symbols-outlined">photo_camera</span>
+              Upload Photo
+            </button>
+<div class="mt-4 hidden animate-pulse" id="upload-result">
+<p class="text-center text-sm text-primary">Recognizing part...</p>
+<div class="mt-2 flex items-center gap-3 rounded-md bg-background-dark p-3">
+<div class="h-12 w-12 rounded bg-border-dark/30"></div>
+<div class="flex-1 space-y-1">
+<p class="font-semibold">4L60E Torque Converter</p>
+<p class="text-xs text-text-secondary-dark">Confidence: 98%</p>
+</div>
+</div>
+</div>
+</div>
+<div class="rounded-lg border border-dashed border-primary/50 bg-surface-dark/50 p-6 text-center">
+<h3 class="font-display text-xl font-bold mb-2">Never Run Out</h3>
+<p class="text-sm text-text-secondary-dark mb-4">
+              Set up reorder alerts for your most used parts and stay ahead of schedule.
+            </p>
+<button class="font-bold text-primary text-sm underline-offset-4 hover:underline">
+              Set Up Alerts
+            </button>
+</div>
+</div>
+</aside>
+<main class="lg:col-span-3">
+<div class="mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<h2 class="font-display text-4xl font-bold uppercase tracking-wide">Parts Inventory</h2>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-text-secondary-dark">search</span>
+<input class="w-full sm:w-80 rounded-md border border-border-dark/50 bg-surface-dark py-2.5 pl-10 pr-4 placeholder:text-text-secondary-dark focus:border-primary focus:ring-primary" placeholder="Search by name or part number..." type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3" id="parts-grid">
+<div class="group flex cursor-pointer flex-col overflow-hidden rounded-lg border border-border-dark/50 bg-surface-dark shadow-sm transition-all hover:shadow-xl hover:border-primary/80 hover:-translate-y-1">
+<div class="relative h-48 w-full bg-black flex items-center justify-center overflow-hidden">
+<img alt="Torque Converter" class="h-full w-full object-contain transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/pw/AP1GczN-d55_sY462PqD1v0X1d497Uu9304j50rS2r_3j6yX1y5_1b4h2c3j4o5k6l7m8n9p0q1r2s3t4u5v6w7x8y9z0a=s500"/>
+</div>
+<div class="flex flex-1 flex-col p-4">
+<h3 class="font-display text-lg font-bold">Torque Converters</h3>
+<p class="text-sm text-text-secondary-dark mt-1 flex-grow">High-stall &amp; heavy-duty options available for various models.</p>
+<p class="mt-4 text-2xl font-bold text-primary">$150.00+</p>
+</div>
+</div>
+<div class="group flex cursor-pointer flex-col overflow-hidden rounded-lg border border-border-dark/50 bg-surface-dark shadow-sm transition-all hover:shadow-xl hover:border-primary/80 hover:-translate-y-1">
+<div class="relative h-48 w-full bg-black flex items-center justify-center overflow-hidden">
+<img alt="Transmission Fluid" class="h-full w-full object-contain transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/pw/AP1GczP2G1v0_1h2i3j4k5l6m7n8p9q0r1s2t3u4v5w6x7y8z9a0b1c2d3e4f5g6h7i8j9k0l1m2n3p4q5r=s500"/>
+</div>
+<div class="flex flex-1 flex-col p-4">
+<h3 class="font-display text-lg font-bold">Transmission Fluids</h3>
+<p class="text-sm text-text-secondary-dark mt-1 flex-grow">Synthetic and conventional fluids for all transmission types.</p>
+<p class="mt-4 text-2xl font-bold text-primary">$25.00 / quart</p>
+</div>
+</div>
+<div class="group flex cursor-pointer flex-col overflow-hidden rounded-lg border border-border-dark/50 bg-surface-dark shadow-sm transition-all hover:shadow-xl hover:border-primary/80 hover:-translate-y-1">
+<div class="relative h-48 w-full bg-black flex items-center justify-center overflow-hidden">
+<img alt="Solenoid Packs" class="h-full w-full object-contain transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/pw/AP1GczPz8y7x6w5v4u3t2s1r0q9p8o7n6m5l4k3j2i1h0g9f8e7d6c5b4a3z2y1x0w9v8u7t6s5r4q3p2o1=s500"/>
+</div>
+<div class="flex flex-1 flex-col p-4">
+<h3 class="font-display text-lg font-bold">Solenoid Packs</h3>
+<p class="text-sm text-text-secondary-dark mt-1 flex-grow">OEM and aftermarket solenoids for precise shifting control.</p>
+<p class="mt-4 text-2xl font-bold text-primary">$120.00+</p>
+</div>
+</div>
+<div class="group flex cursor-pointer flex-col overflow-hidden rounded-lg border border-border-dark/50 bg-surface-dark shadow-sm transition-all hover:shadow-xl hover:border-primary/80 hover:-translate-y-1">
+<div class="relative h-48 w-full bg-black flex items-center justify-center overflow-hidden">
+<img alt="Rebuild Kits" class="h-full w-full object-contain transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/pw/AP1GczP5m4l3k2j1i0h9g8f7e6d5c4b3a2z1y0x9w8v7u6t5s4r3q2p1o0n9m8l7k6j5i4h3g2f1e0d9c8b7a=s500"/>
+</div>
+<div class="flex flex-1 flex-col p-4">
+<h3 class="font-display text-lg font-bold">Master Rebuild Kits</h3>
+<p class="text-sm text-text-secondary-dark mt-1 flex-grow">Comprehensive kits with all necessary seals, gaskets, and clutches.</p>
+<p class="mt-4 text-2xl font-bold text-primary">$350.00+</p>
+</div>
+</div>
+<div class="group flex cursor-pointer flex-col overflow-hidden rounded-lg border border-border-dark/50 bg-surface-dark shadow-sm transition-all hover:shadow-xl hover:border-primary/80 hover:-translate-y-1">
+<div class="relative h-48 w-full bg-black flex items-center justify-center overflow-hidden">
+<img alt="Valve Bodies" class="h-full w-full object-contain transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/pw/AP1GczM_9a8b7c6d5e4f3g2h1i0j9k8l7m6n5p4q3r2s1t0u9v8w7x6y5z4a3b2c1d0e9f8g7h6i5j4k3l2=s500"/>
+</div>
+<div class="flex flex-1 flex-col p-4">
+<h3 class="font-display text-lg font-bold">Valve Bodies</h3>
+<p class="text-sm text-text-secondary-dark mt-1 flex-grow">Remanufactured and performance-upgraded valve bodies.</p>
+<p class="mt-4 text-2xl font-bold text-primary">$280.00+</p>
+</div>
+</div>
+<div class="group flex cursor-pointer flex-col overflow-hidden rounded-lg border border-border-dark/50 bg-surface-dark shadow-sm transition-all hover:shadow-xl hover:border-primary/80 hover:-translate-y-1">
+<div class="relative h-48 w-full bg-black flex items-center justify-center overflow-hidden">
+<img alt="Transmission Filter" class="h-full w-full object-contain transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/pw/AP1GczOC9s8r7q6p5o4n3m2l1k0j9i8h7g6f5e4d3c2b1a0z9y8x7w6v5u4t3s2r1q0p9o8n7m6l5=s500"/>
+</div>
+<div class="flex flex-1 flex-col p-4">
+<h3 class="font-display text-lg font-bold">Filters &amp; Gaskets</h3>
+<p class="text-sm text-text-secondary-dark mt-1 flex-grow">Keep your transmission clean and sealed with quality parts.</p>
+<p class="mt-4 text-2xl font-bold text-primary">$15.00+</p>
+</div>
+</div>
+</div>
+</main>
+</div>
+</main>
+</div>
+<script>
+    // Mock interaction for AI photo upload
+    const uploadBtn = document.getElementById('upload-btn');
+    const uploadResult = document.getElementById('upload-result');
+    const partsGrid = document.getElementById('parts-grid');
+    uploadBtn.addEventListener('click', () => {
+      // Hide button, show spinner
+      uploadBtn.style.display = 'none';
+      uploadResult.style.display = 'block';
+      // Simulate recognition
+      setTimeout(() => {
+        uploadResult.classList.remove('animate-pulse');
+        uploadResult.querySelector('p').textContent = 'Part Identified!';
+        // Simulate adding the item to the list
+        const newItem = `
+          <div class="group flex cursor-pointer flex-col overflow-hidden rounded-lg border border-primary bg-surface-dark shadow-xl ring-2 ring-primary/50 transition-all hover:shadow-2xl hover:-translate-y-1 animate-fade-in-up">
+            <div class="relative h-48 w-full bg-black flex items-center justify-center overflow-hidden">
+              <img alt="Identified Part" class="h-full w-full object-contain transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/pw/AP1GczN-d55_sY462PqD1v0X1d497Uu9304j50rS2r_3j6yX1y5_1b4h2c3j4o5k6l7m8n9p0q1r2s3t4u5v6w7x8y9z0a=s500"/>
+            </div>
+            <div class="flex flex-1 flex-col p-4">
+              <h3 class="font-display text-lg font-bold">4L60E Torque Converter</h3>
+              <p class="text-sm text-text-secondary-dark mt-1 flex-grow">Identified via AI photo upload.</p>
+              <p class="mt-4 text-2xl font-bold text-primary">$185.00</p>
+            </div>
+          </div>
+        `;
+        partsGrid.insertAdjacentHTML('afterbegin', newItem);
+        // Hide result after a while and bring back the button
+        setTimeout(() => {
+          uploadResult.style.display = 'none';
+          uploadBtn.style.display = 'flex';
+          uploadResult.classList.add('animate-pulse');
+          uploadResult.querySelector('p').textContent = 'Recognizing part...';
+        }, 3000);
+      }, 2000);
+    });
+    // Simple animation for mock search
+    const searchInput = document.querySelector('input[type="text"]');
+    searchInput.addEventListener('input', (e) => {
+        const children = Array.from(partsGrid.children);
+        children.forEach((child, i) => {
+            child.style.transitionDelay = `${i * 50}ms`;
+            if (e.target.value) {
+                child.classList.add('opacity-50', 'scale-95');
+            } else {
+                child.classList.remove('opacity-50', 'scale-95');
+            }
+        });
+        if(e.target.value.toLowerCase().includes('torque')){
+            children[0].classList.remove('opacity-50', 'scale-95');
+        }
+    });
+</script>
+<style>
+    @keyframes fade-in-up {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .animate-fade-in-up {
+        animation: fade-in-up 0.5s ease-out forwards;
+    }
+</style>
+
+</body></html>
