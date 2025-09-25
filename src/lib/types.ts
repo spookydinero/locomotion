@@ -5,7 +5,7 @@ export interface Entity {
   name: string;
   code: string;
   type: 'shop' | 'parts' | 'sales' | 'inactive';
-  locations: any; // JSONB
+  locations: Record<string, unknown>; // JSONB
   is_active: boolean;
   created_at: string;
   updated_at: string;
@@ -37,7 +37,7 @@ export interface Customer {
   company_name?: string;
   email?: string;
   phone?: string;
-  address?: any; // JSONB
+  address?: Record<string, unknown>; // JSONB
   customer_type: 'retail' | 'fleet' | 'wholesale';
   tax_id?: string;
   notes?: string;
@@ -167,7 +167,7 @@ export interface CreateCustomerData {
   company_name?: string;
   email?: string;
   phone?: string;
-  address?: any;
+  address?: Record<string, unknown>;
   customer_type?: Customer['customer_type'];
   tax_id?: string;
   notes?: string;
@@ -185,4 +185,30 @@ export interface CreateVehicleData {
   engine_type?: string;
   transmission_type?: string;
   notes?: string;
+}
+
+// Extended types for joined data
+export interface WorkOrderWithJoins extends WorkOrder {
+  customers?: {
+    id: string;
+    first_name?: string;
+    last_name?: string;
+    company_name?: string;
+    email?: string;
+  };
+  vehicles?: {
+    id: string;
+    make?: string;
+    model?: string;
+    year?: number;
+    license_plate?: string;
+  };
+  users?: {
+    id: string;
+    full_name: string;
+  };
+  bays?: {
+    id: string;
+    name: string;
+  };
 }

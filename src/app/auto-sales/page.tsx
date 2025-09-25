@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function AutoSalesPage() {
   return (
@@ -57,10 +58,12 @@ export default function AutoSalesPage() {
               {/* Ford F-150 */}
               <div className="card group flex cursor-pointer flex-col overflow-hidden rounded-xl transition-all hover:bg-base-card-hover hover:-translate-y-1">
                 <div className="relative overflow-hidden">
-                  <img 
+                  <Image 
                     alt="Ford F-150" 
                     className="h-56 w-full object-cover transition-transform group-hover:scale-105" 
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuCITA1AJdGnxEadc7_sf0hSLJsW-Q1WZMUIgMMuzoSnNKqAufG5G4CLnyjp3AOjkubkjRzfiv6tmU8nN5_jmZlf42sDtreLj9aGoNgO77kM84PGLJfdWFU3t67EJbidhF-cj5QTDsScaLp_LMVB5q91hTmrz6WX_I6U8rdvUYL47lAHCqgSaMJac2N1CGYT6qieAqgKd0NkEFBEWmgDpLDmyXD9TiWhDDvobpHrqkAkw9ZsbKRy4LeQlQV36Kchrlgklt9KwUK2qrQ"
+                    width={400}
+                    height={224}
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
                     <h3 className="font-display text-xl font-bold text-white">2018 Ford F-150</h3>

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useAuth } from '@/lib/auth'
 
 interface KPIMetric {
@@ -289,7 +289,7 @@ export default function OwnerDashboard() {
               </select>
               <select
                 value={timeRange}
-                onChange={(e) => setTimeRange(e.target.value as any)}
+                onChange={(e) => setTimeRange(e.target.value as 'today' | 'week' | 'month')}
                 className="px-3 py-2 border border-gray-300 rounded-md text-sm"
               >
                 <option value="today">Today</option>
@@ -305,7 +305,7 @@ export default function OwnerDashboard() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="mb-8">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-              Welcome back, {profile?.full_name || user?.email}
+              Welcome back, {profile?.full_name || (user?.email ?? 'User')}
             </h2>
             <p className="text-gray-600 dark:text-gray-400">
               Here's your real-time business performance overview
@@ -386,7 +386,7 @@ export default function OwnerDashboard() {
               </div>
             </div>
             <p className="text-sm text-gray-600 dark:text-gray-400 mt-4">
-              Target profit margin: 19% per job. Current performance tracking shows we're meeting this goal.
+              Target profit margin: 19% per job. Current performance tracking shows we&apos;re meeting this goal.
             </p>
           </div>
         </div>

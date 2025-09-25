@@ -1,0 +1,106 @@
+8:43:40 PM: Failed to compile.
+8:43:40 PM: ./src/app/auto-sales/page.tsx
+8:43:40 PM: 60:19  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+8:43:40 PM: 81:19  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+8:43:40 PM: 102:19  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+8:43:40 PM: 123:19  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+8:43:40 PM: ./src/app/inventory-management/page.tsx
+8:43:40 PM: 28:15  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+8:43:40 PM: ./src/app/layout.tsx
+8:43:40 PM: 25:9  Warning: Custom fonts not added in `pages/_document.js` will only load for a single page. This is discouraged. See: https://nextjs.org/docs/messages/no-page-custom-font  @next/next/no-page-custom-font
+8:43:40 PM: ./src/app/lifts-management/page.tsx
+8:43:40 PM: 28:15  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+8:43:40 PM: ./src/app/operations-dashboard/page.tsx
+8:43:40 PM: 28:15  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+8:43:40 PM: ./src/app/quotes-pos/page.tsx
+8:43:40 PM: 28:15  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+8:43:40 PM: ./src/app/warranty-management/page.tsx
+8:43:40 PM: 28:15  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+8:43:40 PM: 65:19  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+8:43:40 PM: 73:19  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+8:43:40 PM: 81:19  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+8:43:40 PM: ./src/app/work-orders/page.tsx
+8:43:40 PM: 10:40  Warning: 'isTechnician' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+8:43:40 PM: 33:6  Warning: React Hook useEffect has a missing dependency: 'loadData'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+8:43:40 PM: 223:70  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+8:43:40 PM: 299:36  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+8:43:40 PM: 300:39  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+8:43:40 PM: 300:83  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+8:43:40 PM: 303:36  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+8:43:40 PM: 303:72  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+8:43:40 PM: 303:108  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+8:43:40 PM: ./src/components/CustomerLanding.tsx
+8:43:40 PM: 111:15  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+8:43:40 PM: 112:15  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+8:43:40 PM: 234:15  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+8:43:40 PM: 344:64  Error: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
+8:43:40 PM: 344:202  Error: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
+8:43:40 PM: 358:64  Error: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
+8:43:40 PM: 358:187  Error: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
+8:43:40 PM: 372:64  Error: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
+8:43:40 PM: 372:194  Error: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
+8:43:40 PM: ./src/components/OwnerDashboard.tsx
+8:43:40 PM: 3:20  Warning: 'useEffect' is defined but never used.  @typescript-eslint/no-unused-vars
+8:43:40 PM: 292:65  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+8:43:40 PM: 311:19  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+8:43:40 PM: 389:87  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+8:43:40 PM: ./src/lib/auth.tsx
+8:43:40 PM: 52:6  Warning: React Hook useEffect has a missing dependency: 'supabase.auth'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+8:43:40 PM: 54:34  Warning: 'userId' is defined but never used.  @typescript-eslint/no-unused-vars
+8:43:40 PM: 107:36  Error: The `{}` ("empty object") type allows any non-nullish value, including literals like `0` and `""`.
+8:43:40 PM: - If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+- If you want a type meaning "any object", you probably want `object` instead.
+8:43:40 PM: - If you want a type meaning "any value", you probably want `unknown` instead.  @typescript-eslint/no-empty-object-type
+8:43:40 PM: 127:28  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+8:43:40 PM: 135:28  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+8:43:40 PM: ./src/lib/database.ts
+8:43:40 PM: 76:12  Warning: 'err' is defined but never used.  @typescript-eslint/no-unused-vars
+8:43:40 PM: 122:12  Warning: 'err' is defined but never used.  @typescript-eslint/no-unused-vars
+8:43:40 PM: 154:12  Warning: 'err' is defined but never used.  @typescript-eslint/no-unused-vars
+8:43:40 PM: 176:12  Warning: 'err' is defined but never used.  @typescript-eslint/no-unused-vars
+8:43:40 PM: 193:12  Warning: 'err' is defined but never used.  @typescript-eslint/no-unused-vars
+8:43:40 PM: 237:12  Warning: 'err' is defined but never used.  @typescript-eslint/no-unused-vars
+8:43:40 PM: 257:12  Warning: 'err' is defined but never used.  @typescript-eslint/no-unused-vars
+8:43:40 PM: 309:12  Warning: 'err' is defined but never used.  @typescript-eslint/no-unused-vars
+8:43:40 PM: 348:12  Warning: 'err' is defined but never used.  @typescript-eslint/no-unused-vars
+8:43:40 PM: 357:58  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+8:43:40 PM: 370:12  Warning: 'err' is defined but never used.  @typescript-eslint/no-unused-vars
+8:43:40 PM: 375:61  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+8:43:40 PM: 410:12  Warning: 'err' is defined but never used.  @typescript-eslint/no-unused-vars
+8:43:40 PM: ./src/lib/types.ts
+8:43:40 PM: 8:14  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+8:43:40 PM: 40:13  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+8:43:40 PM: 170:13  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+8:43:40 PM: info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
+8:43:40 PM: ​
+8:43:40 PM: "build.command" failed                                        
+8:43:40 PM: ────────────────────────────────────────────────────────────────
+8:43:40 PM: ​
+8:43:40 PM:   Error message
+8:43:40 PM:   Command failed with exit code 1: npm run build
+8:43:40 PM: ​
+8:43:40 PM:   Error location
+8:43:40 PM:   In build.command from netlify.toml:
+8:43:40 PM:   npm run build
+8:43:40 PM: ​
+8:43:40 PM:   Resolved config
+8:43:40 PM:   build:
+8:43:40 PM:     command: npm run build
+8:43:40 PM:     commandOrigin: config
+8:43:40 PM:     environment:
+8:43:40 PM:       - NEXT_PUBLIC_SUPABASE_ANON_KEY
+8:43:40 PM:       - NEXT_PUBLIC_SUPABASE_URL
+8:43:40 PM:       - SUPABASE_SERVICE_ROLE_KEY
+8:43:40 PM:       - NEXT_TELEMETRY_DISABLED
+8:43:40 PM:     publish: /opt/build/repo/.next
+8:43:40 PM:     publishOrigin: config
+8:43:40 PM:   plugins:
+8:43:40 PM:     - inputs: {}
+8:43:40 PM:       origin: config
+8:43:40 PM:       package: "@netlify/plugin-nextjs"
+8:43:40 PM:   redirects:
+8:43:41 PM:     - from: /*
+      status: 200
+      to: /index.html
+  redirectsOrigin: config
+8:43:41 PM: Build failed due to a user error: Build script returned non-zero exit code: 2

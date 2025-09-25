@@ -3,13 +3,13 @@
 import { useState, useEffect } from 'react'
 import { getWorkOrders, createWorkOrder, updateWorkOrder, deleteWorkOrder, getEntities, getCustomers, getVehicles } from '@/lib/database'
 import { useAuth, usePermissions } from '@/lib/auth'
-import type { WorkOrder, Customer, Vehicle, Entity } from '@/lib/types'
+import type { WorkOrder, WorkOrderWithJoins, Customer, Vehicle, Entity } from '@/lib/types'
 
 export default function WorkOrdersPage() {
   const { user, loading: authLoading } = useAuth()
   const { hasPermission, userEntities, isTechnician } = usePermissions()
 
-  const [workOrders, setWorkOrders] = useState<WorkOrder[]>([])
+  const [workOrders, setWorkOrders] = useState<WorkOrderWithJoins[]>([])
   const [entities, setEntities] = useState<Entity[]>([])
   const [customers, setCustomers] = useState<Customer[]>([])
   const [vehicles, setVehicles] = useState<Vehicle[]>([])
@@ -81,7 +81,7 @@ export default function WorkOrdersPage() {
     }
   }
 
-  const handleStatusChange = async (id: string, status: WorkOrder['status']) => {
+  const handleStatusChange = async (id: string, status: WorkOrderWithJoins['status']) => {
     const result = await updateWorkOrder(id, { status })
     if (result.data) {
       setWorkOrders(workOrders.map(wo => wo.id === id ? result.data! : wo))
@@ -296,17 +296,17 @@ export default function WorkOrdersPage() {
                     {workOrder.ro_number}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                    {(workOrder as any).customers?.company_name ||
-                     `${(workOrder as any).customers?.first_name} ${(workOrder as any).customers?.last_name}`}
+                    {(workOrder.customers as { company_name?: string; first_name?: string; last_name?: string })?.company_name ||
+                     `${(workOrder.customers as { first_name?: string; last_name?: string })?.first_name || ''} ${(workOrder.customers as { first_name?: string; last_name?: string })?.last_name || ''}`.trim()}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                    {(workOrder as any).vehicles?.year} {(workOrder as any).vehicles?.make} {(workOrder as any).vehicles?.model}
+                    {(workOrder.vehicles as { year?: number; make?: string; model?: string })?.year} {(workOrder.vehicles as { make?: string })?.make} {(workOrder.vehicles as { model?: string })?.model}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     {canUpdateWorkOrders ? (
                       <select
                         value={workOrder.status}
-                        onChange={(e) => handleStatusChange(workOrder.id, e.target.value as WorkOrder['status'])}
+                        onChange={(e) => handleStatusChange(workOrder.id, e.target.value as WorkOrderWithJoins['status'])}
                         className={`text-xs font-medium px-2.5 py-0.5 rounded-full border-0 ${getStatusColor(workOrder.status)}`}
                       >
                         <option value="open">Open</option>

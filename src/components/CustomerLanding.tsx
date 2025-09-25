@@ -341,7 +341,7 @@ export default function CustomerLanding() {
                     ))}
                   </div>
                 </div>
-                <p className="text-text-secondary italic mb-6">"Excellent service! They rebuilt my transmission and it runs like new. The tracking system kept me informed throughout the entire process."</p>
+                <p className="text-text-secondary italic mb-6">&quot;Excellent service! They rebuilt my transmission and it runs like new. The tracking system kept me informed throughout the entire process.&quot;</p>
                 <div className="border-t border-base-border pt-4">
                   <p className="font-semibold text-text-primary">Sarah Johnson</p>
                   <p className="text-text-muted text-sm">Arlington Customer</p>
@@ -355,7 +355,7 @@ export default function CustomerLanding() {
                     ))}
                   </div>
                 </div>
-                <p className="text-text-secondary italic mb-6">"Fast, reliable parts delivery. Locomotion Parts has everything we need for our shop. Great quality and competitive prices."</p>
+                <p className="text-text-secondary italic mb-6">&quot;Fast, reliable parts delivery. Locomotion Parts has everything we need for our shop. Great quality and competitive prices.&quot;</p>
                 <div className="border-t border-base-border pt-4">
                   <p className="font-semibold text-text-primary">Mike Rodriguez</p>
                   <p className="text-text-muted text-sm">Shop Owner, Houston</p>
@@ -369,7 +369,7 @@ export default function CustomerLanding() {
                     ))}
                   </div>
                 </div>
-                <p className="text-text-secondary italic mb-6">"Bought a used car from Locomotion Auto Sales. Great condition, fair price, and excellent customer service throughout the process."</p>
+                <p className="text-text-secondary italic mb-6">&quot;Bought a used car from Locomotion Auto Sales. Great condition, fair price, and excellent customer service throughout the process.&quot;</p>
                 <div className="border-t border-base-border pt-4">
                   <p className="font-semibold text-text-primary">David Chen</p>
                   <p className="text-text-muted text-sm">Auto Sales Customer</p>

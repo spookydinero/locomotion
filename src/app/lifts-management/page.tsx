@@ -1,5 +1,7 @@
 'use client'
 
+import Image from 'next/image';
+
 export default function LiftsManagement() {
   return (
     <div className="flex flex-col min-h-screen font-display bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
@@ -25,7 +27,7 @@ export default function LiftsManagement() {
               <button className="p-2 rounded-full hover:bg-background-light dark:hover:bg-background-dark">
                 <span className="material-symbols-outlined text-subtext-light dark:text-subtext-dark">notifications</span>
               </button>
-              <img alt="User avatar" className="h-10 w-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFWFFlhBU5v8rOwkXZfHqAGPOwEK7pQX42PAdbdPDJFF4Qz4MPqAiVztz33ycyV0kH90phSC9Kj_QNiwcy08nYrUOP4RzoSTJlJ7n6XIxyge0ZW3kvMDUgLA69-Nkbj9ySk1HpLk5bgKSyXlYtQEaD10xObX-qKHXJYrKD8L5Rzzbj2NCe63MgainHn_FDKLMmakG9o0vx5O7jSUhi2o9bexlmJOEstXLKWj2h2iLVrTehoxUsJW-DWcUO6DtRRL4uZqaXWFMKfyA"/>
+              <Image alt="User avatar" className="h-10 w-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFWFFlhBU5v8rOwkXZfHqAGPOwEK7pQX42PAdbdPDJFF4Qz4MPqAiVztz33ycyV0kH90phSC9Kj_QNiwcy08nYrUOP4RzoSTJlJ7n6XIxyge0ZW3kvMDUgLA69-Nkbj9ySk1HpLk5bgKSyXlYtQEaD10xObX-qKHXJYrKD8L5Rzzbj2NCe63MgainHn_FDKLMmakG9o0vx5O7jSUhi2o9bexlmJOEstXLKWj2h2iLVrTehoxUsJW-DWcUO6DtRRL4uZqaXWFMKfyA" width={40} height={40}/>
             </div>
           </div>
         </div>

@@ -98,13 +98,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 export function useAuth() {
   const context = useContext(AuthContext)
   if (context === undefined) {
-    throw new Error('useAuth must be used within an AuthProvider')
+    throw new Error(&apos;useAuth must be used within an AuthProvider&apos;)
   }
   return context
 }
 
 // Higher-order component for protecting routes
-export function withAuth<T extends {}>(
+export function withAuth<T extends Record<string, unknown>>(
   Component: React.ComponentType<T>,
   requiredPermissions?: string[],
   requiredEntityAccess?: string[]
@@ -124,7 +124,7 @@ export function withAuth<T extends {}>(
     if (requiredPermissions) {
       const hasRequiredPermissions = requiredPermissions.every(perm => hasPermission(perm))
       if (!hasRequiredPermissions) {
-        return <div>You don't have permission to access this page.</div>
+        return <div>You don&apos;t have permission to access this page.</div>
       }
     }
 
@@ -132,7 +132,7 @@ export function withAuth<T extends {}>(
     if (requiredEntityAccess) {
       const hasRequiredEntityAccess = requiredEntityAccess.every(entityId => hasEntityAccess(entityId))
       if (!hasRequiredEntityAccess) {
-        return <div>You don't have access to the required entities.</div>
+        return <div>You don&apos;t have access to the required entities.</div>
       }
     }
 
