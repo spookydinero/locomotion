@@ -3,14 +3,15 @@
 import { createContext, useContext, useEffect, useState, useRef } from 'react'
 import { createClient } from './supabase'
 import type { User, Role } from './types'
+import type { Session } from '@supabase/supabase-js'
 
 interface AuthContextType {
   user: User | null
   profile: (User & { roles: Role }) | null
   loading: boolean
   signOut: () => Promise<void>
-  hasPermission: (permission: string) => boolean
-  hasEntityAccess: (entityId: string) => boolean
+  hasPermission: () => boolean
+  hasEntityAccess: () => boolean
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined)
@@ -118,7 +119,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
 
     // 🔥 CRITICAL FIX #3: Proper profile fetching with loading management
-    const fetchUserProfile = async (session: any) => {
+    const fetchUserProfile = async (session: Session) => {
       // 🔥 Prevent concurrent fetches
       if (isFetchingProfile.current) {
         console.log('ℹ️ Profile fetch already in progress, skipping...')
@@ -131,7 +132,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         setLoading(true) // Start loading when fetching profile
 
         // If no token in session, try to get it from the client
-        let token = session?.access_token
+        let token: string | undefined = session?.access_token
         if (!token) {
           console.log('🔑 No token in session, getting from client...')
           const { data: { session: clientSession } } = await supabase.auth.getSession()
@@ -160,7 +161,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           let errorData = {}
           try {
             errorData = await response.json()
-          } catch (parseError) {
+          } catch {
             errorData = { 
               message: `HTTP ${response.status}: ${response.statusText}`,
               status: response.status,
@@ -289,6 +290,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       console.log('🧹 AuthProvider cleanup')
       subscription.unsubscribe()
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const signOut = async () => {
@@ -305,11 +307,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   }
 
-  const hasPermission = (permission: string): boolean => {
+  const hasPermission = (): boolean => {
     return true // Simplified for now
   }
 
-  const hasEntityAccess = (entityId: string): boolean => {
+  const hasEntityAccess = (): boolean => {
     return true // Simplified for now
   }
 

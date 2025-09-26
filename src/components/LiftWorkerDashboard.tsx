@@ -23,7 +23,7 @@ interface BayStatus {
 }
 
 export default function LiftWorkerDashboard() {
-  const { user, profile } = useAuth()
+  const { user } = useAuth()
   const [workOrders, setWorkOrders] = useState<WorkOrder[]>([])
   const [bayStatuses, setBayStatuses] = useState<BayStatus[]>([])
   const [currentTime, setCurrentTime] = useState(new Date())

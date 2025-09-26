@@ -35,7 +35,7 @@ interface Quote {
 }
 
 export default function FrontDeskDashboard() {
-  const { user, profile } = useAuth()
+  const { user } = useAuth()
   const [customers, setCustomers] = useState<Customer[]>([])
   const [appointments, setAppointments] = useState<Appointment[]>([])
   const [quotes, setQuotes] = useState<Quote[]>([])
@@ -225,7 +225,7 @@ export default function FrontDeskDashboard() {
               <div className="bg-white dark:bg-background-dark/50 border border-gray-200 dark:border-gray-800 rounded-lg p-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Today's Appointments</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Today&apos;s Appointments</p>
                     <p className="text-2xl font-bold text-gray-900 dark:text-white">8</p>
                   </div>
                   <div className="p-3 rounded-lg bg-blue-100 text-blue-600 dark:bg-blue-900/20">
@@ -258,7 +258,7 @@ export default function FrontDeskDashboard() {
               <div className="bg-white dark:bg-background-dark/50 border border-gray-200 dark:border-gray-800 rounded-lg p-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Today's Revenue</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Today&apos;s Revenue</p>
                     <p className="text-2xl font-bold text-gray-900 dark:text-white">$4,250</p>
                   </div>
                   <div className="p-3 rounded-lg bg-purple-100 text-purple-600 dark:bg-purple-900/20">

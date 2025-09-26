@@ -2,10 +2,10 @@
 
 import { useAuth } from '@/lib/auth'
 import { useRouter, useSearchParams } from 'next/navigation'
-import { useEffect } from 'react'
+import { useEffect, Suspense } from 'react'
 import LoginForm from '@/components/LoginForm'
 
-export default function LoginPage() {
+function LoginPageContent() {
   const { user, profile, loading } = useAuth()
   const router = useRouter()
   const searchParams = useSearchParams()
@@ -123,5 +123,13 @@ export default function LoginPage() {
     <div className="min-h-screen flex items-center justify-center">
       <div className="text-lg">Redirecting to dashboard...</div>
     </div>
+  )
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="text-lg">Loading...</div></div>}>
+      <LoginPageContent />
+    </Suspense>
   )
 }

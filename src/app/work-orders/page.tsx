@@ -21,9 +21,9 @@ export default function WorkOrdersPage() {
   const [priority, setPriority] = useState<'low' | 'normal' | 'high' | 'urgent'>('normal')
 
   // Check permissions
-  const canCreateWorkOrders = hasPermission('write') || hasPermission('all')
-  const canUpdateWorkOrders = hasPermission('write') || hasPermission('all')
-  const canDeleteWorkOrders = hasPermission('write') || hasPermission('all')
+  const canCreateWorkOrders = hasPermission()
+  const canUpdateWorkOrders = hasPermission()
+  const canDeleteWorkOrders = hasPermission()
 
   const loadData = useCallback(async () => {
     setLoading(true)
@@ -37,9 +37,8 @@ export default function WorkOrdersPage() {
 
       if (workOrdersRes.data) setWorkOrders(workOrdersRes.data.data)
       if (entitiesRes.data) {
-        // Filter entities based on user access
-        const accessibleEntities = entitiesRes.data.filter(entity => hasEntityAccess(entity.id))
-        setEntities(accessibleEntities)
+        // All entities are accessible for now (simplified permissions)
+        setEntities(entitiesRes.data)
       }
       if (customersRes.data) setCustomers(customersRes.data.data)
       if (vehiclesRes.data) setVehicles(vehiclesRes.data.data)
