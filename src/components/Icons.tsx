@@ -1,3 +1,5 @@
+'use client'
+
 import {
   TrendingUp,
   TrendingDown,
@@ -19,8 +21,6 @@ import {
   ClipboardList,
   ShieldCheck,
 } from 'lucide-react'
-
-console.log('Icons loaded from lucide-react:', { TrendingUp, TrendingDown, Minus })
 
 // Re-export all icons with consistent sizing and props
 export {
