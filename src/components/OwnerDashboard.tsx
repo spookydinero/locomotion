@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useAuth } from '@/lib/auth'
+import { TrendingUp, TrendingDown, Minus } from '@/components/Icons'
 
 interface KPIMetric {
   id: string
@@ -251,11 +252,11 @@ export default function OwnerDashboard() {
   const getChangeIcon = (changeType: string) => {
     switch (changeType) {
       case 'increase':
-        return 'trending_up'
+        return <TrendingUp className="w-5 h-5" />
       case 'decrease':
-        return 'trending_down'
+        return <TrendingDown className="w-5 h-5" />
       default:
-        return 'trending_flat'
+        return <Minus className="w-5 h-5" />
     }
   }
 
@@ -343,13 +344,13 @@ export default function OwnerDashboard() {
                           {formatValue(metric.value, metric.format)}
                         </p>
                         <div className={`flex items-center mt-2 text-sm ${getChangeColor(metric.changeType)}`}>
-                          <span className="material-symbols-outlined text-lg mr-1">
-                            {getChangeIcon(metric.changeType)}
-                          </span>
-                          <span>
-                            {metric.change > 0 ? '+' : ''}{metric.change}% from yesterday
-                          </span>
-                        </div>
+                           <span className="mr-1">
+                             {getChangeIcon(metric.changeType)}
+                           </span>
+                           <span>
+                             {metric.change > 0 ? '+' : ''}{metric.change}% from yesterday
+                           </span>
+                         </div>
                       </div>
                     </div>
                   </div>

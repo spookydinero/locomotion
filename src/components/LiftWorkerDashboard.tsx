@@ -3,6 +3,7 @@
 import { createClient } from '@/lib/supabase'
 import { useAuth } from '@/lib/auth'
 import { useState, useEffect } from 'react'
+import { Bell, Wrench, Car, Package, QrCode } from '@/components/Icons'
 
 interface WorkOrder {
   id: string
@@ -132,7 +133,7 @@ export default function LiftWorkerDashboard() {
                 {currentTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
               </div>
               <button className="relative rounded-full p-2 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark focus:ring-primary">
-                <span className="material-symbols-outlined">notifications</span>
+                <Bell className="w-5 h-5" />
                 <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-xs text-white">3</span>
               </button>
               <div className="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style={{backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuA3wajLm9Cr17fcEP1sLHnsc5trHbwxs6cdbNSSBwn9xEW_kqHZa4UzDGc_YRUgc7rtCl7VqyZt0_tN6-_u6zsHl60F0_am3q2nCKTCYlgwx4y4fxFKKwZDuXsZwsAuSHBu9upF-dm7Cpdnb5B-5bw25gLN7yrMyRSgIu4C4Lg7o3abeRUujofP0oAzv7WO5dcfyxOohIuyONxJZhYF67DhPY7eQkQBVBRVRViI447NRic9L5Az4ZIkGdXgvupKEuWU4s9lSxueZ3w')"}}></div>
@@ -230,7 +231,7 @@ export default function LiftWorkerDashboard() {
                 <a className="group block rounded-lg p-6 bg-white dark:bg-background-dark/50 border border-gray-200 dark:border-gray-800 hover:shadow-lg hover:border-primary dark:hover:border-primary transition-all duration-300" href="/work-orders">
                   <div className="flex items-center gap-4">
                     <div className="p-3 rounded-lg bg-primary/10 text-primary">
-                      <span className="material-symbols-outlined">build</span>
+                      <Wrench className="w-5 h-5" />
                     </div>
                     <h4 className="text-base font-bold text-gray-800 dark:text-gray-200">Technician Interface</h4>
                   </div>
@@ -238,7 +239,7 @@ export default function LiftWorkerDashboard() {
                 <a className="group block rounded-lg p-6 bg-white dark:bg-background-dark/50 border border-gray-200 dark:border-gray-800 hover:shadow-lg hover:border-primary dark:hover:border-primary transition-all duration-300" href="/qc-road-test">
                   <div className="flex items-center gap-4">
                     <div className="p-3 rounded-lg bg-primary/10 text-primary">
-                      <span className="material-symbols-outlined">time_to_leave</span>
+                      <Car className="w-5 h-5" />
                     </div>
                     <h4 className="text-base font-bold text-gray-800 dark:text-gray-200">QC & Road Test</h4>
                   </div>
@@ -246,7 +247,7 @@ export default function LiftWorkerDashboard() {
                 <a className="group block rounded-lg p-6 bg-white dark:bg-background-dark/50 border border-gray-200 dark:border-gray-800 hover:shadow-lg hover:border-primary dark:hover:border-primary transition-all duration-300" href="/inventory-management">
                   <div className="flex items-center gap-4">
                     <div className="p-3 rounded-lg bg-primary/10 text-primary">
-                      <span className="material-symbols-outlined">inventory_2</span>
+                      <Package className="w-5 h-5" />
                     </div>
                     <h4 className="text-base font-bold text-gray-800 dark:text-gray-200">Parts Request</h4>
                   </div>
@@ -254,7 +255,7 @@ export default function LiftWorkerDashboard() {
                 <button className="group block rounded-lg p-6 bg-white dark:bg-background-dark/50 border border-gray-200 dark:border-gray-800 hover:shadow-lg hover:border-primary dark:hover:border-primary transition-all duration-300 w-full text-left">
                   <div className="flex items-center gap-4">
                     <div className="p-3 rounded-lg bg-primary/10 text-primary">
-                      <span className="material-symbols-outlined">qr_code_scanner</span>
+                      <QrCode className="w-5 h-5" />
                     </div>
                     <h4 className="text-base font-bold text-gray-800 dark:text-gray-200">QR Scanner</h4>
                   </div>
