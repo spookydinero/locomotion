@@ -252,11 +252,11 @@ export default function OwnerDashboard() {
   const getChangeIcon = (changeType: string) => {
     switch (changeType) {
       case 'increase':
-        return <TrendingUp className="w-5 h-5" />
+        return <TrendingUp className="w-5 h-5 text-current" />
       case 'decrease':
-        return <TrendingDown className="w-5 h-5" />
+        return <TrendingDown className="w-5 h-5 text-current" />
       default:
-        return <Minus className="w-5 h-5" />
+        return <Minus className="w-5 h-5 text-current" />
     }
   }
 

@@ -193,7 +193,7 @@ export default function FrontDeskDashboard() {
             </nav>
             <div className="flex items-center gap-4">
               <button className="relative rounded-full p-2 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark focus:ring-primary">
-                <Bell className="w-5 h-5" />
+                <Bell className="w-5 h-5 text-current" />
                 <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-xs text-white">2</span>
               </button>
               <div className="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style={{backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuA3wajLm9Cr17fcEP1sLHnsc5trHbwxs6cdbNSSBwn9xEW_kqHZa4UzDGc_YRUgc7rtCl7VqyZt0_tN6-_u6zsHl60F0_am3q2nCKTCYlgwx4y4fxFKKwZDuXsZwsAuSHBu9upF-dm7Cpdnb5B-5bw25gLN7yrMyRSgIu4C4Lg7o3abeRUujofP0oAzv7WO5dcfyxOohIuyONxJZhYF67DhPY7eQkQBVBRVRViI447NRic9L5Az4ZIkGdXgvupKEuWU4s9lSxueZ3w')"}}></div>
@@ -230,7 +230,7 @@ export default function FrontDeskDashboard() {
                     <p className="text-2xl font-bold text-gray-900 dark:text-white">8</p>
                   </div>
                   <div className="p-3 rounded-lg bg-blue-100 text-blue-600 dark:bg-blue-900/20">
-                    <Calendar className="w-5 h-5" />
+                    <Calendar className="w-5 h-5 text-current" />
                   </div>
                 </div>
               </div>
@@ -241,7 +241,7 @@ export default function FrontDeskDashboard() {
                     <p className="text-2xl font-bold text-gray-900 dark:text-white">5</p>
                   </div>
                   <div className="p-3 rounded-lg bg-yellow-100 text-yellow-600 dark:bg-yellow-900/20">
-                    <FileText className="w-5 h-5" />
+                    <FileText className="w-5 h-5 text-current" />
                   </div>
                 </div>
               </div>
@@ -252,7 +252,7 @@ export default function FrontDeskDashboard() {
                     <p className="text-2xl font-bold text-gray-900 dark:text-white">24</p>
                   </div>
                   <div className="p-3 rounded-lg bg-green-100 text-green-600 dark:bg-green-900/20">
-                    <Users className="w-5 h-5" />
+                    <Users className="w-5 h-5 text-current" />
                   </div>
                 </div>
               </div>
@@ -263,7 +263,7 @@ export default function FrontDeskDashboard() {
                     <p className="text-2xl font-bold text-gray-900 dark:text-white">$4,250</p>
                   </div>
                   <div className="p-3 rounded-lg bg-purple-100 text-purple-600 dark:bg-purple-900/20">
-                    <DollarSign className="w-5 h-5" />
+                    <DollarSign className="w-5 h-5 text-current" />
                   </div>
                 </div>
               </div>
@@ -459,7 +459,7 @@ export default function FrontDeskDashboard() {
                 <button className="group block rounded-lg p-6 bg-white dark:bg-background-dark/50 border border-gray-200 dark:border-gray-800 hover:shadow-lg hover:border-primary dark:hover:border-primary transition-all duration-300 w-full text-left">
                   <div className="flex items-center gap-4">
                     <div className="p-3 rounded-lg bg-primary/10 text-primary">
-                      <UserPlus className="w-5 h-5" />
+                      <UserPlus className="w-5 h-5 text-current" />
                     </div>
                     <h4 className="text-base font-bold text-gray-800 dark:text-gray-200">Add Customer</h4>
                   </div>
@@ -467,7 +467,7 @@ export default function FrontDeskDashboard() {
                 <button className="group block rounded-lg p-6 bg-white dark:bg-background-dark/50 border border-gray-200 dark:border-gray-800 hover:shadow-lg hover:border-primary dark:hover:border-primary transition-all duration-300 w-full text-left">
                   <div className="flex items-center gap-4">
                     <div className="p-3 rounded-lg bg-primary/10 text-primary">
-                      <CalendarCheck className="w-5 h-5" />
+                      <CalendarCheck className="w-5 h-5 text-current" />
                     </div>
                     <h4 className="text-base font-bold text-gray-800 dark:text-gray-200">Schedule Appointment</h4>
                   </div>
@@ -475,7 +475,7 @@ export default function FrontDeskDashboard() {
                 <a className="group block rounded-lg p-6 bg-white dark:bg-background-dark/50 border border-gray-200 dark:border-gray-800 hover:shadow-lg hover:border-primary dark:hover:border-primary transition-all duration-300" href="/quotes-pos">
                   <div className="flex items-center gap-4">
                     <div className="p-3 rounded-lg bg-primary/10 text-primary">
-                      <Receipt className="w-5 h-5" />
+                      <Receipt className="w-5 h-5 text-current" />
                     </div>
                     <h4 className="text-base font-bold text-gray-800 dark:text-gray-200">Create Quote</h4>
                   </div>
@@ -483,7 +483,7 @@ export default function FrontDeskDashboard() {
                 <button className="group block rounded-lg p-6 bg-white dark:bg-background-dark/50 border border-gray-200 dark:border-gray-800 hover:shadow-lg hover:border-primary dark:hover:border-primary transition-all duration-300 w-full text-left">
                   <div className="flex items-center gap-4">
                     <div className="p-3 rounded-lg bg-primary/10 text-primary">
-                      <CreditCard className="w-5 h-5" />
+                      <CreditCard className="w-5 h-5 text-current" />
                     </div>
                     <h4 className="text-base font-bold text-gray-800 dark:text-gray-200">Process Payment</h4>
                   </div>

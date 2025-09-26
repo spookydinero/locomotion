@@ -34,7 +34,7 @@ export default function ManagerDashboard() {
             </nav>
             <div className="flex items-center gap-4">
               <button className="relative rounded-full p-2 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark focus:ring-primary">
-                <Bell className="w-5 h-5" />
+                <Bell className="w-5 h-5 text-current" />
               </button>
               <div className="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style={{backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCX8q6OgZZeVuHvA9O7fGh2cZAI3wNLmcw8SGaTt1BEar-pPUuwN33pkZjkSCg2Trpy-DCsFBF3Ou98pWnoKlECugC0ERpaf3_7MZ8B4ZcYAn_8ou-AWv8Cr9famj823hb30KyqxJjbevKaAmqmQPz1Js0My3ExTyU1uOeQ945BgKdw-R_DEJpy4tIn8nToGcWotERvyMeCbMFIBEzvJxW1CtPxWPJfUsOi7p3dhV0nv89HLPjtcdcJRhx63MHSnEbmD3xT_XU-Eos')"}}></div>
               <button 
@@ -56,7 +56,7 @@ export default function ManagerDashboard() {
               <a className="group block rounded-lg p-6 bg-white dark:bg-background-dark/50 border border-gray-200 dark:border-gray-800 hover:shadow-lg hover:border-primary dark:hover:border-primary transition-all duration-300" href="/operations-dashboard">
                 <div className="flex items-center gap-4">
                   <div className="p-3 rounded-lg bg-primary/10 text-primary">
-                    <LayoutDashboard className="w-5 h-5" />
+                    <LayoutDashboard className="w-5 h-5 text-current" />
                   </div>
                   <h3 className="text-base font-bold text-gray-800 dark:text-gray-200">Operations Dashboard</h3>
                 </div>
@@ -64,7 +64,7 @@ export default function ManagerDashboard() {
               <a className="group block rounded-lg p-6 bg-white dark:bg-background-dark/50 border border-gray-200 dark:border-gray-800 hover:shadow-lg hover:border-primary dark:hover:border-primary transition-all duration-300" href="/work-orders">
                 <div className="flex items-center gap-4">
                   <div className="p-3 rounded-lg bg-primary/10 text-primary">
-                    <ClipboardList className="w-5 h-5" />
+                    <ClipboardList className="w-5 h-5 text-current" />
                   </div>
                   <h3 className="text-base font-bold text-gray-800 dark:text-gray-200">Work Orders</h3>
                 </div>
@@ -72,7 +72,7 @@ export default function ManagerDashboard() {
               <a className="group block rounded-lg p-6 bg-white dark:bg-background-dark/50 border border-gray-200 dark:border-gray-800 hover:shadow-lg hover:border-primary dark:hover:border-primary transition-all duration-300" href="/lifts-management">
                 <div className="flex items-center gap-4">
                   <div className="p-3 rounded-lg bg-primary/10 text-primary">
-                    <Car className="w-5 h-5" />
+                    <Car className="w-5 h-5 text-current" />
                   </div>
                   <h3 className="text-base font-bold text-gray-800 dark:text-gray-200">Lifts Management</h3>
                 </div>
@@ -80,7 +80,7 @@ export default function ManagerDashboard() {
               <a className="group block rounded-lg p-6 bg-white dark:bg-background-dark/50 border border-gray-200 dark:border-gray-800 hover:shadow-lg hover:border-primary dark:hover:border-primary transition-all duration-300" href="/quotes-pos">
                 <div className="flex items-center gap-4">
                   <div className="p-3 rounded-lg bg-primary/10 text-primary">
-                    <FileText className="w-5 h-5" />
+                    <FileText className="w-5 h-5 text-current" />
                   </div>
                   <h3 className="text-base font-bold text-gray-800 dark:text-gray-200">Quotes & POs</h3>
                 </div>
@@ -88,7 +88,7 @@ export default function ManagerDashboard() {
               <a className="group block rounded-lg p-6 bg-white dark:bg-background-dark/50 border border-gray-200 dark:border-gray-800 hover:shadow-lg hover:border-primary dark:hover:border-primary transition-all duration-300" href="/inventory-management">
                 <div className="flex items-center gap-4">
                   <div className="p-3 rounded-lg bg-primary/10 text-primary">
-                    <Package className="w-5 h-5" />
+                    <Package className="w-5 h-5 text-current" />
                   </div>
                   <h3 className="text-base font-bold text-gray-800 dark:text-gray-200">Inventory Management</h3>
                 </div>
@@ -96,7 +96,7 @@ export default function ManagerDashboard() {
               <a className="group block rounded-lg p-6 bg-white dark:bg-background-dark/50 border border-gray-200 dark:border-gray-800 hover:shadow-lg hover:border-primary dark:hover:border-primary transition-all duration-300" href="/warranty-management">
                 <div className="flex items-center gap-4">
                   <div className="p-3 rounded-lg bg-primary/10 text-primary">
-                    <ShieldCheck className="w-5 h-5" />
+                    <ShieldCheck className="w-5 h-5 text-current" />
                   </div>
                   <h3 className="text-base font-bold text-gray-800 dark:text-gray-200">Warranty Management</h3>
                 </div>
