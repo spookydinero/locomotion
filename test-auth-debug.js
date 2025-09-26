@@ -1,4 +1,5 @@
 const { createClient } = require('@supabase/supabase-js');
+require('dotenv').config({ path: '.env.local' });
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
@@ -37,8 +38,8 @@ async function testAuth() {
     
     console.log('✅ Session token obtained');
     
-    // Test /api/user endpoint
-    const response = await fetch('http://localhost:3002/api/user', {
+    // Test /api/auth/profile endpoint
+    const response = await fetch('http://localhost:3000/api/auth/profile', {
       headers: {
         'Authorization': `Bearer ${session.access_token}`,
         'Content-Type': 'application/json'

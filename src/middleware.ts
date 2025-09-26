@@ -1,10 +1,29 @@
-import { createMiddlewareClient } from '@supabase/auth-helpers-nextjs'
+import { createServerClient } from '@supabase/ssr'
+import { createClient } from '@supabase/supabase-js'
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
 export async function middleware(req: NextRequest) {
   const res = NextResponse.next()
-  const supabase = createMiddlewareClient({ req, res })
+
+  // Create server client for middleware
+  const supabase = createServerClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    {
+      cookies: {
+        get(name: string) {
+          return req.cookies.get(name)?.value
+        },
+        set(name: string, value: string, options: any) {
+          res.cookies.set(name, value, options)
+        },
+        remove(name: string, options: any) {
+          res.cookies.set(name, '', { ...options, maxAge: 0 })
+        },
+      },
+    }
+  )
 
   // Get the current session
   const {
@@ -35,12 +54,18 @@ export async function middleware(req: NextRequest) {
       return NextResponse.redirect(redirectUrl)
     }
 
-    // Get user profile to check role
-    const { data: profile } = await supabase
+    // Get user profile to check role (using service role to bypass RLS)
+    console.log('🔍 Middleware fetching profile for user:', session.user.id)
+    const serviceSupabase = createClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.SUPABASE_SERVICE_ROLE_KEY!
+    )
+
+    const { data: profile, error: profileError } = await serviceSupabase
       .from('users')
       .select(`
         *,
-        roles:role_id (
+        roles!role_id (
           id,
           name,
           permissions
@@ -49,7 +74,16 @@ export async function middleware(req: NextRequest) {
       .eq('id', session.user.id)
       .single()
 
+    console.log('🔍 Middleware profile fetch result:', {
+      hasProfile: !!profile,
+      profileError: profileError?.message,
+      profileRoles: profile?.roles,
+      profileRoleName: profile?.roles?.name,
+      profileRole: profile?.role
+    })
+
     if (!profile) {
+      console.log('❌ No profile found, redirecting to login')
       // User profile not found, redirect to login
       const redirectUrl = req.nextUrl.clone()
       redirectUrl.pathname = '/login'

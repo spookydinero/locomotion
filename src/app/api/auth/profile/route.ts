@@ -28,11 +28,12 @@ export async function GET(request: NextRequest) {
     console.log('✅ Token verified for user:', user.email)
 
     // Fetch user profile with role information
+    console.log('🔍 Fetching user profile for user ID:', user.id)
     const { data: userData, error: userError } = await supabase
       .from('users')
       .select(`
         *,
-        roles:role_id (
+        roles!role_id (
           id,
           name,
           permissions,
@@ -44,10 +45,16 @@ export async function GET(request: NextRequest) {
 
     if (userError || !userData) {
       console.error('❌ Error fetching user profile:', userError)
-      return NextResponse.json({ error: 'User profile not found' }, { status: 404 })
+      console.error('❌ User data received:', userData)
+      return NextResponse.json({
+        error: 'User profile not found',
+        details: userError?.message,
+        userId: user.id
+      }, { status: 404 })
     }
 
     console.log('🎉 User profile fetched successfully:', userData.email, userData.roles?.name)
+    console.log('📋 Full user data:', JSON.stringify(userData, null, 2))
 
     return NextResponse.json({ 
       success: true, 
