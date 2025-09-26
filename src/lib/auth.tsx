@@ -31,29 +31,47 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         console.log('🔔 Auth state change:', event, session?.user?.email)
         
         if (event === 'SIGNED_IN' && session?.user) {
-          console.log('✅ User signed in')
-          // For now, just set a basic user object
-          setUser({ 
-            id: session.user.id, 
-            email: session.user.email || '',
-            full_name: session.user.email || '',
-            role_id: 'default-role',
-            entity_access: ['default'],
-            is_active: true,
-            created_at: new Date().toISOString(),
-            updated_at: new Date().toISOString()
-          } as User)
-          setProfile({ 
-            id: session.user.id, 
-            email: session.user.email || '',
-            full_name: session.user.email || '',
-            role_id: 'default-role',
-            entity_access: ['default'],
-            is_active: true,
-            created_at: new Date().toISOString(),
-            updated_at: new Date().toISOString(),
-            roles: { id: 'default-role', name: 'manager', permissions: [], created_at: new Date().toISOString() } as Role
-          } as User & { roles: Role })
+          console.log('✅ User signed in, fetching real profile...')
+          
+          try {
+            // Get the access token for API authentication
+            const { data: { session: currentSession } } = await supabase.auth.getSession()
+            if (!currentSession?.access_token) {
+              console.error('❌ No access token available')
+              return
+            }
+
+            // Fetch user profile via secure API endpoint
+            const response = await fetch('/api/auth/profile', {
+              method: 'GET',
+              headers: {
+                'Authorization': `Bearer ${currentSession.access_token}`,
+                'Content-Type': 'application/json'
+              }
+            })
+
+            if (!response.ok) {
+              const errorData = await response.json()
+              console.error('❌ API error:', errorData)
+              return
+            }
+
+            const { profile: userData } = await response.json()
+            
+            if (!userData) {
+              console.error('❌ No user data returned from API')
+              return
+            }
+
+            console.log('🎉 Real user profile fetched via API:', userData)
+            
+            // Set REAL user data from database
+            setUser(userData as User)
+            setProfile(userData as User & { roles: Role })
+            
+          } catch (err) {
+            console.error('💥 Profile fetch error:', err)
+          }
         } else if (event === 'SIGNED_OUT') {
           console.log('👋 User signed out')
           setUser(null)

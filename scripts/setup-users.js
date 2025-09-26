@@ -31,6 +31,20 @@ const users = [
     full_name: 'Fyves Manager',
     role: 'manager',
     entity_access: ['LAT-ARL'] // Arlington location only
+  },
+  {
+    email: 'frontdesk@test.com',
+    password: '123test',
+    full_name: 'Front Desk Test User',
+    role: 'front_desk',
+    entity_access: ['LAT-ARL'] // Arlington location only
+  },
+  {
+    email: 'technician@test.com',
+    password: '123test',
+    full_name: 'Technician Test User',
+    role: 'technician',
+    entity_access: ['LAT-ARL'] // Arlington location only
   }
 ];
 
