@@ -250,13 +250,20 @@ export default function OwnerDashboard() {
   }
 
   const getChangeIcon = (changeType: string) => {
+    console.log('Rendering icon for changeType:', changeType)
     switch (changeType) {
       case 'increase':
-        return <TrendingUp className="w-5 h-5 text-current" />
+        const upIcon = <TrendingUp className="w-5 h-5 text-current" />
+        console.log('TrendingUp icon component:', upIcon)
+        return upIcon
       case 'decrease':
-        return <TrendingDown className="w-5 h-5 text-current" />
+        const downIcon = <TrendingDown className="w-5 h-5 text-current" />
+        console.log('TrendingDown icon component:', downIcon)
+        return downIcon
       default:
-        return <Minus className="w-5 h-5 text-current" />
+        const minusIcon = <Minus className="w-5 h-5 text-current" />
+        console.log('Minus icon component:', minusIcon)
+        return minusIcon
     }
   }
 
